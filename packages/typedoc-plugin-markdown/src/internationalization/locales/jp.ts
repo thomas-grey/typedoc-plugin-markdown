@@ -6,6 +6,8 @@ import { TranslatableStrings } from '@plugin/types/index.js';
  * @category Locales
  */
 export const translatable: Partial<TranslatableStrings> = {
+  theme_category: 'カテゴリ',
+  theme_categories: 'カテゴリ',
   theme_default_value: 'デフォルト値',
   theme_default_type: 'デフォルトタイプ',
   theme_description: '説明',

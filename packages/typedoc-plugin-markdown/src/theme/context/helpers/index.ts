@@ -1,7 +1,6 @@
 export * from './get-angle-bracket.js';
 export * from './get-comment-parts.js';
 export * from './get-declaration-type.js';
-export * from './get-description-for-comment.js';
 export * from './get-flattened-declarations.js';
 export * from './get-hierarchy-type.js';
 export * from './get-keyword.js';
@@ -11,6 +10,7 @@ export * from './get-project-name.js';
 export * from './get-property-default-value.js';
 export * from './get-reflection-flags.js';
 export * from './get-return-type.js';
+export * from './get-short-description.js';
 export * from './has-useful-type-details.js';
 export * from './is-group-kind.js';
 export * from './use-table.format.js';

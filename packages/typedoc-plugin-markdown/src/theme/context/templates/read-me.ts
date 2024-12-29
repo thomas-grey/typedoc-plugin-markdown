@@ -2,9 +2,6 @@ import { MarkdownPageEvent } from '@plugin/events/index.js';
 import { MarkdownThemeContext } from '@plugin/theme/index.js';
 import { CommentDisplayPart, ProjectReflection } from 'typedoc';
 
-/**
- * Template that specifically maps to the resolved readme file. This template is not used when 'readme' is set to 'none'.
- */
 export function readme(
   this: MarkdownThemeContext,
   page: MarkdownPageEvent<ProjectReflection>,

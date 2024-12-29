@@ -1,6 +1,7 @@
 export * from './comments.comment.js';
 export * from './container.body.js';
 export * from './container.categories.js';
+export * from './container.categoryIndex.js';
 export * from './container.groups.js';
 export * from './container.members.js';
 export * from './member.accessor.js';

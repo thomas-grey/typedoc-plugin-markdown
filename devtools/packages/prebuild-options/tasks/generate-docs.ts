@@ -162,7 +162,7 @@ ${presetsJson}
         );
         out.push(
           `${optionLevel} ${
-            option.deprecated ? `~--${option.name}~` : `--${option.name}`
+            option.deprecated ? `~${option.name}~` : `${option.name}`
           }`,
         );
         if (option.deprecated) {

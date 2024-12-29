@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Categories should get category page with single module: (Output File Strategy "categories") (Option Group "1") 1`] = `
+"[**categories-out-single-module**](README.md)
+
+***
+
+[categories-out-single-module](README.md) / Category 3
+
+# Category 3
+
+## SomeInterfaceTwoB
+"
+`;
+
+exports[`Categories should get category page: (Output File Strategy "categories") (Option Group "1") 1`] = `
+"[**categories-out**](../README.md)
+
+***
+
+[categories-out](../README.md) / [module-2](README.md) / Category 3
+
+# Category 3
+
+## SomeInterfaceTwoB
+"
+`;
+
+exports[`Categories should get category with namespace single module: (Output File Strategy "categories") (Option Group "1") 1`] = `
+"[**categories-out-single-module**](README.md)
+
+***
+
+[categories-out-single-module](README.md) / Category 2
+
+# Category 2
+
+Description for module-2 Category 2
+
+## SomeClass2
+
+### Constructors
+
+#### new SomeClass2()
+
+> **new SomeClass2**(): [\`SomeClass2\`](README.md#someclass2)
+
+##### Returns
+
+[\`SomeClass2\`](README.md#someclass2)
+
+***
+
+## SomeInterface2
+
+***
+
+## someFunction2()
+
+> **someFunction2**(): \`void\`
+
+### Returns
+
+\`void\`
+"
+`;
+
+exports[`Categories should get category with namespace: (Output File Strategy "categories") (Option Group "1") 1`] = `
+"[**categories-out**](../README.md)
+
+***
+
+[categories-out](../README.md) / [module-2](README.md) / Category 2
+
+# Category 2
+
+Description for module-2 Category 2
+
+## SomeClass2
+
+### Constructors
+
+#### new SomeClass2()
+
+> **new SomeClass2**(): [\`SomeClass2\`](README.md#someclass2-1)
+
+##### Returns
+
+[\`SomeClass2\`](README.md#someclass2-1)
+
+***
+
+## SomeInterface2
+
+***
+
+## someFunction2()
+
+> **someFunction2**(): \`void\`
+
+### Returns
+
+\`void\`
+"
+`;

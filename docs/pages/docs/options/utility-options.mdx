@@ -4,7 +4,7 @@ import { Callout, FileTree } from "nextra/components";
 
 Options that are used for general configuration and utility purposes.
 
-## --formatWithPrettier
+## formatWithPrettier
 
 <Callout emoji="💡">Apply additional output formatting with Prettier.</Callout>
 
@@ -27,7 +27,7 @@ Please note that Prettier is not a dependency of this plugin and must be install
 }
 ```
 
-## --prettierConfigFile
+## prettierConfigFile
 
 <Callout emoji="💡">
   Specify a custom Prettier configuration file location.
@@ -47,7 +47,7 @@ Please note this option is only applicable when `formatWithPrettier` is set to `
 }
 ```
 
-## --sanitizeComments
+## sanitizeComments
 
 <Callout emoji="💡">Sanitize HTML and JSX inside JsDoc comments.</Callout>
 
@@ -71,7 +71,7 @@ This option would typically be used when source code comes from an external sour
 }
 ```
 
-## --publicPath
+## publicPath
 
 <Callout emoji="💡">Specify the base path for all urls.</Callout>
 
@@ -85,7 +85,7 @@ If undefined all urls will be relative.
 }
 ```
 
-## --anchorPrefix
+## anchorPrefix
 
 <Callout emoji="💡">
   Custom anchor prefix when anchoring to in-page symbols.
@@ -101,7 +101,7 @@ This option should be used when parsers require a custom anchor prefix.
 }
 ```
 
-## --useHTMLEncodedBrackets
+## useHTMLEncodedBrackets
 
 <Callout emoji="💡">Use HTML encoded entities for angle brackets.</Callout>
 
@@ -116,7 +116,7 @@ However, using HTML entities (`&lt;` and `&gt;`) might be preferable to avoid an
 }
 ```
 
-## --useHTMLAnchors
+## useHTMLAnchors
 
 <Callout emoji="💡">Add HTML anchors to page headings.</Callout>
 
@@ -134,7 +134,7 @@ Note that HTML anchors will be added to linkable symbols listed in table rows as
 }
 ```
 
-## --preserveAnchorCasing
+## preserveAnchorCasing
 
 <Callout emoji="💡">
   Preserve anchor casing when generating link to symbols.
@@ -152,7 +152,7 @@ This option can be used for engines that require the preservation of anchor link
 }
 ```
 
-## --pageTitleTemplates
+## pageTitleTemplates
 
 <Callout emoji="💡">Change specific text placeholders in the template.</Callout>
 
@@ -184,6 +184,7 @@ Available keys:
 pageTitleTemplates: {
  index: (args) => `${args.projectName}: ${args.version}`,
  module: (args) => args.name,
+ category: (args) => args.name,
  member: (args) => `${args.kind}: ${args.name}`,
 }
 ```
@@ -192,6 +193,7 @@ pageTitleTemplates: {
 {
   "pageTitleTemplates": {
     "index": "{projectName} {version}",
+    "category": "{name}",
     "member": "{kind}: {name}",
     "module": "{name}"
   }

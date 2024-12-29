@@ -5,12 +5,8 @@ export default {
     title: 'Getting Started',
   },
   'quick-start': '',
-  options: '',
-  '-- Guides': {
-    type: 'separator',
-    title: 'Guides',
-  },
   'typedoc-usage': '',
+  options: '',
   '-- Support': {
     type: 'separator',
     title: 'Support',

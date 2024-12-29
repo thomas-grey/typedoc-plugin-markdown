@@ -2,9 +2,6 @@ import { MarkdownPageEvent } from '@plugin/events/index.js';
 import { MarkdownThemeContext } from '@plugin/theme/index.js';
 import { DocumentReflection } from 'typedoc';
 
-/**
- * Template that maps to a project document.
- */
 export function document(
   this: MarkdownThemeContext,
   page: MarkdownPageEvent<DocumentReflection>,

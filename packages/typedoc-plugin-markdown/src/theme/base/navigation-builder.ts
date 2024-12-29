@@ -156,8 +156,11 @@ export class NavigationBuilder {
     ) {
       this.navigation.push(
         ...project.categories.map((category) => {
+          const categoryUrl = (category as unknown as DeclarationReflection)
+            .url;
           return {
             title: category.title,
+            ...(categoryUrl && { path: categoryUrl }),
             children: this.getCategoryGroupChildren(category),
           };
         }),
@@ -278,7 +281,7 @@ export class NavigationBuilder {
       ?.filter((child) => child.hasOwnDocument)
       .reduce((acc: NavigationItem[], child) => {
         const mapping = this.theme.getTemplateMapping(
-          child.kind,
+          child,
           outputFileStrategy,
         );
         if (mapping) {
@@ -288,10 +291,14 @@ export class NavigationBuilder {
             child.categories?.length
               ? child.categories
                   ?.map((category) => {
+                    const categoryUrl = (
+                      category as unknown as DeclarationReflection
+                    ).url;
                     const catChildren = this.getCategoryGroupChildren(category);
-                    return catChildren.length
+                    return categoryUrl || catChildren.length
                       ? {
                           title: category.title,
+                          path: categoryUrl,
                           children: catChildren,
                         }
                       : null;

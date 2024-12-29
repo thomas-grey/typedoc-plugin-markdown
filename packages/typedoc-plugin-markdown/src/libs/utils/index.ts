@@ -8,6 +8,7 @@ export * from './encode-angle-brackets.js';
 export * from './escape-chars.js';
 export * from './format-markdown.js';
 export * from './format-table-cell.js';
+export * from './get-directory-name.js';
 export * from './get-file-name-with-extension.js';
 export * from './is-quoted.js';
 export * from './remove-first-scoped-directory.js';

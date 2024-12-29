@@ -5,10 +5,11 @@
  */
 
 /**
- * The allowed values of the `--outputFileStrategy` option.
+ * The allowed values of the `outputFileStrategy` option.
  */
 export enum OutputFileStrategy {
   Members = 'members',
+  Categories = 'categories',
   Modules = 'modules',
 }
 

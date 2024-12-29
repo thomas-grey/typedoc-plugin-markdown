@@ -10,7 +10,7 @@ export function load(app) {
     fs.writeFileSync(
       `${output.outputDirectory}/urls.json`,
       JSON.stringify(
-        output.urls.map((url) => url.url),
+        output.urls?.map((url) => url.url),
         null,
         2,
       ),

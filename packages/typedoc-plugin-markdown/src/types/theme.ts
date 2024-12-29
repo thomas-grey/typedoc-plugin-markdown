@@ -54,6 +54,7 @@ export interface UrlOption {
   entryModule?: string;
   entryFileName?: string;
   group?: string;
+  category?: string;
 }
 
 /**

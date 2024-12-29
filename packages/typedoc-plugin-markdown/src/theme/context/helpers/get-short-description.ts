@@ -1,13 +1,13 @@
 import { MarkdownThemeContext } from '@plugin/theme/index.js';
-import { Comment } from 'typedoc';
+import { CommentDisplayPart } from 'typedoc';
 
-export function getDescriptionForComment(
+export function getShortDescription(
   this: MarkdownThemeContext,
-  comment: Comment,
+  commentDisplayParts?: CommentDisplayPart[],
 ): string | null {
-  if (comment?.summary?.length) {
+  if (commentDisplayParts) {
     return this.helpers
-      .getCommentParts(comment.summary)
+      .getCommentParts(commentDisplayParts)
       ?.split(/(\r?\n){2}/)[0]
       .replace(/\r?\n/g, ' ');
   }

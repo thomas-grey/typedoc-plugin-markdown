@@ -22,6 +22,6 @@ describe(`Text`, () => {
   });
 
   test(`should get translations for sidebar`, () => {
-    expectFileToEqual('text', 'members', ['sidebar.json']);
+    expectFileToEqual('text', 'members', ['navigation.json']);
   });
 });

@@ -9,6 +9,7 @@ import {
   normalizePath,
   ProjectReflection,
   Reflection,
+  ReflectionCategory,
   Renderer,
 } from 'typedoc';
 
@@ -126,7 +127,9 @@ async function renderPages(renderer: Renderer, output: MarkdownRendererEvent) {
 
   const pages =
     output.urls?.filter(
-      (urlMapping) => urlMapping.model instanceof Reflection,
+      (urlMapping) =>
+        urlMapping.model instanceof ReflectionCategory ||
+        urlMapping.model instanceof Reflection,
     ) || [];
   for (const urlMapping of pages) {
     const [template, page] = output.createPageEvent(urlMapping);
@@ -134,7 +137,10 @@ async function renderPages(renderer: Renderer, output: MarkdownRendererEvent) {
 
     renderer.trigger(MarkdownPageEvent.BEGIN, page);
 
-    if (page.model instanceof Reflection) {
+    if (
+      page.model instanceof ReflectionCategory ||
+      page.model instanceof Reflection
+    ) {
       const markdownFromTheme = renderer.theme!.render(page, template);
 
       if (formatWithPrettier) {

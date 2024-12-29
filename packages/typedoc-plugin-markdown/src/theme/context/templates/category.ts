@@ -1,13 +1,15 @@
 import { MarkdownPageEvent } from '@plugin/events/index.js';
 import { heading } from '@plugin/libs/markdown/index.js';
 import { MarkdownThemeContext } from '@plugin/theme/index.js';
-import { DeclarationReflection, ReflectionKind } from 'typedoc';
+import { DeclarationReflection, Reflection, ReflectionKind } from 'typedoc';
 
-export function reflection(
+export function category(
   this: MarkdownThemeContext,
-  page: MarkdownPageEvent<DeclarationReflection>,
+  page: MarkdownPageEvent<Reflection>,
 ) {
   const md: string[] = [];
+
+  const model = page.model as unknown as any;
 
   md.push(this.hook('page.begin', this).join('\n'));
 
@@ -25,19 +27,30 @@ export function reflection(
 
   md.push(this.hook('content.begin', this).join('\n'));
 
-  if (
-    [
-      ReflectionKind.Module,
-      ReflectionKind.Namespace,
-      ReflectionKind.Enum,
-      ReflectionKind.Class,
-      ReflectionKind.Interface,
-    ].includes(page.model.kind)
-  ) {
-    md.push(this.partials.memberWithGroups(page.model, { headingLevel: 2 }));
-  } else {
-    md.push(this.partials.memberContainer(page.model, { headingLevel: 1 }));
+  if (model.description) {
+    md.push(this.helpers.getCommentParts(model.description));
   }
+
+  const hasNamespaces = model.children.some(
+    (child) => child.kind === ReflectionKind.Namespace,
+  );
+
+  if (hasNamespaces) {
+    md.push(
+      heading(2, this.internationalization.proxy.kind_plural_namespace()),
+    );
+    md.push(
+      this.partials.groupIndex(model, {
+        filterKinds: [ReflectionKind.Namespace],
+      }),
+    );
+  }
+
+  md.push(
+    this.partials.members(model.children as DeclarationReflection[], {
+      headingLevel: 2,
+    }),
+  );
 
   md.push(this.partials.footer());
 

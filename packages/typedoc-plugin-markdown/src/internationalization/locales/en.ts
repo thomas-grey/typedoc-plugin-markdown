@@ -5,6 +5,8 @@ import { TranslatableStrings } from '@plugin/types/index.js';
  * @category Locales
  */
 export const translatable: TranslatableStrings = {
+  theme_category: 'Category',
+  theme_categories: 'Categories',
   theme_default_value: 'Default value',
   theme_default_type: 'Default type',
   theme_description: 'Description',

@@ -32,6 +32,14 @@ describe(`Urls`, () => {
     expectUrlsToEqual('documents', ['members', 'modules']);
   });
 
+  test(`should gets for categories with multi modules`, () => {
+    expectUrlsToEqual('categories', ['categories']);
+  });
+
+  test(`should gets for categories with single module`, () => {
+    expectUrlsToEqual('categoriesSingleModule', ['categories']);
+  });
+
   test(`should gets Urls for documents single module`, () => {
     expectUrlsToEqual('documentsSingleModule', ['members', 'modules']);
   });

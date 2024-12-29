@@ -31,6 +31,7 @@ export const TEXT_CONTENT_MAPPINGS = {
 
 export const DEFAULT_PAGE_TITLES = {
   index: '{projectName} {version}',
+  category: '{name}',
   member: '{kind}: {name}',
   module: '{name}',
 };

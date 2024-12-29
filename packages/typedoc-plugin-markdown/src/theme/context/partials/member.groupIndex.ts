@@ -14,22 +14,22 @@ import {
   ReflectionKind,
 } from 'typedoc';
 
-export function groupIndex(group: ReflectionGroup | ReflectionCategory) {
+export function groupIndex(
+  group: ReflectionGroup | ReflectionCategory,
+  options?: { filterKinds: ReflectionKind[] },
+) {
+  const children = options?.filterKinds?.length
+    ? group.children.filter((child) => options.filterKinds.includes(child.kind))
+    : group.children;
   if (this.options.getValue('indexFormat').toLowerCase().includes('table')) {
-    return getGroupIndexTable(
-      this,
-      group.children as DeclarationReflection[] | DocumentReflection[],
-    );
+    return getGroupIndexTable(this, children);
   }
-  return getGroupIndexList(
-    this,
-    group.children as DeclarationReflection[] | DocumentReflection[],
-  );
+  return getGroupIndexList(this, children);
 }
 
 export function getGroupIndexList(
   context: MarkdownThemeContext,
-  children: DeclarationReflection[] | DocumentReflection[],
+  children: (DeclarationReflection | DocumentReflection)[],
 ) {
   const filteredChildren =
     children
@@ -48,7 +48,7 @@ export function getGroupIndexList(
 
 export function getGroupIndexTable(
   context: MarkdownThemeContext,
-  children: DeclarationReflection[] | DocumentReflection[],
+  children: (DeclarationReflection | DocumentReflection)[],
 ) {
   const leftAlignHeadings = context.options.getValue(
     'tableColumnSettings',
@@ -93,7 +93,7 @@ export function getGroupIndexTable(
         ? context.partials.comment(comment, {
             isTableColumn: true,
           })
-        : context.helpers.getDescriptionForComment(comment);
+        : context.helpers.getShortDescription(comment.summary);
     };
 
     row.push(description()?.trim() || '-');

@@ -1056,3 +1056,37 @@ exports[`Urls should gets Urls with media assets: outputFileStrategy: members 2`
   "_media/logo.svg",
 ]
 `;
+
+exports[`Urls should gets for categories with multi modules: outputFileStrategy: categories 1`] = `
+[
+  "README.md",
+  "module-1/Category-1.md",
+  "module-1/Category-2.md",
+  "module-1/README.md",
+  "module-2/Category-2.md",
+  "module-2/Category-3.md",
+  "module-2/README.md",
+  "module-2/category-1/README.md",
+  "module-2/category-1/namespaces/NamespaceCategoryOne/NamespaceA-Category-2.md",
+  "module-2/category-1/namespaces/NamespaceCategoryOne/README.md",
+  "module-2/namespaces/NamespaceCategoryOne/NamespaceA-Category-2.md",
+  "module-2/namespaces/NamespaceCategoryOne/README.md",
+  "module-2/namespaces/NamespaceNoCategory/README.md",
+  "module-2/other/README.md",
+  "module-2/other/namespaces/NamespaceNoCategory/README.md",
+  "module-3/README.md",
+]
+`;
+
+exports[`Urls should gets for categories with single module: outputFileStrategy: categories 1`] = `
+[
+  "Category-2.md",
+  "Category-3.md",
+  "README.md",
+  "category-1/README.md",
+  "category-1/namespaces/NamespaceCategoryOne/NamespaceA-Category-2.md",
+  "category-1/namespaces/NamespaceCategoryOne/README.md",
+  "other/README.md",
+  "other/namespaces/NamespaceNoCategory/README.md",
+]
+`;

@@ -5,6 +5,8 @@ import { TranslatableStrings } from '@plugin/types/index.js';
  * @category Locales
  */
 export const translatable: Partial<TranslatableStrings> = {
+  theme_category: '分类',
+  theme_categories: '分类',
   theme_default_value: '默认值',
   theme_default_type: '默认类型',
   theme_description: '描述',

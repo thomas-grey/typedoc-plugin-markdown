@@ -1207,6 +1207,106 @@ exports[`Navigation should get with and without groups and categories: (Output F
 ]"
 `;
 
+exports[`Navigation should gets Navigation Json for categories multi module: (Output File Strategy "categories") (Option Group "1") 1`] = `
+"[
+  {
+    "title": "module-1",
+    "kind": 2,
+    "path": "module-1/README.md",
+    "isDeprecated": false,
+    "children": [
+      {
+        "title": "Category 1",
+        "path": "module-1/Category-1.md"
+      },
+      {
+        "title": "Category 2",
+        "path": "module-1/Category-2.md"
+      }
+    ]
+  },
+  {
+    "title": "module-2",
+    "kind": 2,
+    "path": "module-2/README.md",
+    "isDeprecated": false,
+    "children": [
+      {
+        "title": "Category 1",
+        "path": "module-2/category-1/README.md",
+        "children": [
+          {
+            "title": "NamespaceCategoryOne",
+            "kind": 4,
+            "path": "module-2/namespaces/NamespaceCategoryOne/README.md"
+          }
+        ]
+      },
+      {
+        "title": "Category 2",
+        "path": "module-2/Category-2.md"
+      },
+      {
+        "title": "Category 3",
+        "path": "module-2/Category-3.md"
+      },
+      {
+        "title": "Other",
+        "path": "module-2/other/README.md",
+        "children": [
+          {
+            "title": "NamespaceNoCategory",
+            "kind": 4,
+            "path": "module-2/namespaces/NamespaceNoCategory/README.md"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "module-3",
+    "kind": 2,
+    "path": "module-3/README.md",
+    "isDeprecated": false
+  }
+]"
+`;
+
+exports[`Navigation should gets Navigation Json for categories single module: (Output File Strategy "categories") (Option Group "1") 1`] = `
+"[
+  {
+    "title": "Category 1",
+    "path": "category-1/README.md",
+    "children": [
+      {
+        "title": "NamespaceCategoryOne",
+        "kind": 4,
+        "path": "category-1/namespaces/NamespaceCategoryOne/README.md"
+      }
+    ]
+  },
+  {
+    "title": "Category 2",
+    "path": "Category-2.md"
+  },
+  {
+    "title": "Category 3",
+    "path": "Category-3.md"
+  },
+  {
+    "title": "Other",
+    "path": "other/README.md",
+    "children": [
+      {
+        "title": "NamespaceNoCategory",
+        "kind": 4,
+        "path": "other/namespaces/NamespaceNoCategory/README.md"
+      }
+    ]
+  }
+]"
+`;
+
 exports[`Navigation should gets Navigation Json for documents multi module: (Output File Strategy "members") (Option Group "1") 1`] = `
 "[
   {

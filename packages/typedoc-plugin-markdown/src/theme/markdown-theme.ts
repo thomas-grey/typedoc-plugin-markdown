@@ -1,5 +1,9 @@
 import { MarkdownPageEvent } from '@plugin/events/index.js';
-import { formatMarkdown } from '@plugin/libs/utils/index.js';
+import {
+  formatMarkdown,
+  getDirectoryName,
+  slugify,
+} from '@plugin/libs/utils/index.js';
 import { OutputFileStrategy } from '@plugin/options/maps.js';
 import { NavigationBuilder, UrlBuilder } from '@plugin/theme/base/index.js';
 import { MarkdownThemeContext } from '@plugin/theme/index.js';
@@ -9,6 +13,7 @@ import {
   DocumentReflection,
   ProjectReflection,
   Reflection,
+  ReflectionCategory,
   ReflectionKind,
   Renderer,
   Theme,
@@ -76,7 +81,7 @@ export class MarkdownTheme extends Theme {
    * @internal
    */
   getTemplateMapping(
-    kind: ReflectionKind,
+    reflection: DeclarationReflection | DocumentReflection,
     outputFileStrategy?: OutputFileStrategy,
   ) {
     outputFileStrategy =
@@ -85,21 +90,27 @@ export class MarkdownTheme extends Theme {
         'outputFileStrategy',
       ) as OutputFileStrategy);
 
-    const directoryName = (reflectionKind: ReflectionKind) => {
-      const pluralString = ReflectionKind.pluralString(reflectionKind);
-      return pluralString.replace(/[\s_-]+/g, '-').toLowerCase();
-    };
-
     const membersWithOwnFile =
       this.application.options.getValue('membersWithOwnFile');
 
+    if (
+      outputFileStrategy === OutputFileStrategy.Categories &&
+      reflection instanceof ReflectionCategory
+    ) {
+      return {
+        template: this.categoryTemplate,
+        directory: slugify(reflection.title),
+        kind: null,
+      };
+    }
+
     const memberMapping = (
-      template: (pageEvent: MarkdownPageEvent<any>) => string,
+      template: (pageEvent: MarkdownPageEvent<Reflection>) => string,
       kind: ReflectionKind,
     ) => {
       return {
         template,
-        directory: directoryName(kind),
+        directory: getDirectoryName(ReflectionKind.pluralString(kind)),
         kind: kind,
       };
     };
@@ -111,12 +122,16 @@ export class MarkdownTheme extends Theme {
       },
       [ReflectionKind.Namespace]: {
         template: this.reflectionTemplate,
-        directory: directoryName(ReflectionKind.Namespace),
+        directory: getDirectoryName(
+          ReflectionKind.pluralString(ReflectionKind.Namespace),
+        ),
         kind: ReflectionKind.Namespace,
       },
       [ReflectionKind.Document]: {
         template: this.documentTemplate,
-        directory: directoryName(ReflectionKind.Document),
+        directory: getDirectoryName(
+          ReflectionKind.pluralString(ReflectionKind.Document),
+        ),
         kind: ReflectionKind.Document,
       },
     };
@@ -193,7 +208,7 @@ export class MarkdownTheme extends Theme {
       );
     }
 
-    return mappings[kind];
+    return mappings[reflection.kind];
   }
 
   /**
@@ -222,5 +237,12 @@ export class MarkdownTheme extends Theme {
    */
   reflectionTemplate = (page: MarkdownPageEvent<DeclarationReflection>) => {
     return this.getRenderContext(page).templates.reflection(page);
+  };
+
+  /**
+   * @internal
+   */
+  categoryTemplate = (page: MarkdownPageEvent<Reflection>) => {
+    return this.getRenderContext(page).templates.category(page);
   };
 }

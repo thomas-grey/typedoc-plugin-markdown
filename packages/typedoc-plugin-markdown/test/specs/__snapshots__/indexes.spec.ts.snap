@@ -1,0 +1,216 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Indexes Categories should compile module index for categories single module: (Output File Strategy "categories") (Option Group "1") 1`] = `
+"**categories-out-single-module**
+
+***
+
+# categories-out-single-module
+
+## Categories
+
+| Category | Description |
+| ------ | ------ |
+| [Category 1](category-1/README.md) | Description for module-2 category 1 |
+| [Category 2](Category-2.md) | Description for module-2 Category 2 |
+| [Category 3](Category-3.md) | - |
+| [Other](other/README.md) | - |
+"
+`;
+
+exports[`Indexes Categories should compile module index for categories: (Output File Strategy "categories") (Option Group "1") 1`] = `
+"[**categories-out**](../README.md)
+
+***
+
+[categories-out](../README.md) / module-1
+
+# module-1
+
+Module description para 1
+
+Module description para 2
+
+## Categories
+
+- [Category 1](Category-1.md)
+- [Category 2](Category-2.md)
+"
+`;
+
+exports[`Indexes Categories should compile project index for categories single module: (Output File Strategy "categories") (Option Group "1") 1`] = `
+"**categories-out-single-module**
+
+***
+
+# categories-out-single-module
+
+## Categories
+
+| Category | Description |
+| ------ | ------ |
+| [Category 1](category-1/README.md) | Description for module-2 category 1 |
+| [Category 2](Category-2.md) | Description for module-2 Category 2 |
+| [Category 3](Category-3.md) | - |
+| [Other](other/README.md) | - |
+"
+`;
+
+exports[`Indexes Categories should compile project index for categories: (Output File Strategy "categories") (Option Group "1") 1`] = `
+"**categories-out**
+
+***
+
+# categories-out
+
+## Modules
+
+- [module-1](module-1/README.md)
+- [module-2](module-2/README.md)
+- [module-3](module-3/README.md)
+"
+`;
+
+exports[`Indexes Members should compile project index for "members": (Output File Strategy "members") (Option Group "1") 1`] = `
+"# typedoc-stubs
+
+## Modules
+
+- ["/Test/Module/Name"](Test_Module_Name/README.md)
+- [@scope/namespace](namespace/README.md)
+- [module-1/submodules/submodule-1](module-1/submodules/submodule-1/README.md)
+- [module-1/submodules/submodule-2](module-1/submodules/submodule-2/README.md)
+- [module-1/submodules/submodule-3-with-modules/nested-submodule-1](module-1/submodules/submodule-3-with-modules/nested-submodule-1/README.md)
+- [module-1/submodules/submodule-3-with-modules/nested-submodule-2](module-1/submodules/submodule-3-with-modules/nested-submodule-2/README.md)
+- [module-2](module-2/README.md)
+"
+`;
+
+exports[`Indexes Members should compile reflection "indexes": (Output File Strategy "members") (Option Group "1") 1`] = `
+"# typedoc-stubs
+
+Module comments
+
+## Enumerations
+
+- [BasicEnum](enumerations/BasicEnum.md)
+- [EnumWithValues](enumerations/EnumWithValues.md)
+
+## Classes
+
+- [AbstractClass](classes/AbstractClass.md)
+- [BaseClass](classes/BaseClass.md)
+- [BasicClass](classes/BasicClass.md)
+- [CallbacksOptions](classes/CallbacksOptions.md)
+- [ChildClassA](classes/ChildClassA.md)
+- [ChildClassB](classes/ChildClassB.md)
+- [ClassWithAccessorKeywords](classes/ClassWithAccessorKeywords.md)
+- [ClassWithAccessors](classes/ClassWithAccessors.md)
+- [ClassWithComplexProps](classes/ClassWithComplexProps.md)
+- [ClassWithConstructorOverloads](classes/ClassWithConstructorOverloads.md)
+- [ClassWithFlags](classes/ClassWithFlags.md)
+- [ClassWithModifiers](classes/ClassWithModifiers.md)
+- [ClassWithoutPropCategories](classes/ClassWithoutPropCategories.md)
+- [ClassWithPropCategories](classes/ClassWithPropCategories.md)
+- [ClassWithSimpleProps](classes/ClassWithSimpleProps.md)
+- [ClassWithSymbols](classes/ClassWithSymbols.md)
+- [ClassWithTypeParameters](classes/ClassWithTypeParameters.md)
+- [DerivedClassA](classes/DerivedClassA.md)
+- [DerivedClassB](classes/DerivedClassB.md)
+- [DisposableClass](classes/DisposableClass.md)
+- [GrandChildClassA](classes/GrandChildClassA.md)
+- [GrandChildClassB](classes/GrandChildClassB.md)
+
+## Interfaces
+
+- [BasicInterface](interfaces/BasicInterface.md)
+- [CustomEventInterface](interfaces/CustomEventInterface.md)
+- [ExtendedInterface](interfaces/ExtendedInterface.md)
+- [IndexableInterface](interfaces/IndexableInterface.md)
+- [InterfaceWithComments](interfaces/InterfaceWithComments.md)
+- [InterfaceWithEventProperties](interfaces/InterfaceWithEventProperties.md)
+- [InterfaceWithFlags](interfaces/InterfaceWithFlags.md)
+- [InterfaceWithTypeParameters](interfaces/InterfaceWithTypeParameters.md)
+- [MultipleIndexableInterface](interfaces/MultipleIndexableInterface.md)
+
+## Type Aliases
+
+- [\\_\\_TypeDeclarationWithSpecialCharacters\\_](type-aliases/TypeDeclarationWithSpecialCharacters.md)
+- [ArrayOfObjectsType](type-aliases/ArrayOfObjectsType.md)
+- [ArrayType](type-aliases/ArrayType.md)
+- [ConditionalType](type-aliases/ConditionalType.md)
+- [ExplicitTypeDefOptions](type-aliases/ExplicitTypeDefOptions.md)
+- [ExternalReferenceType](type-aliases/ExternalReferenceType.md)
+- [FunctionType](type-aliases/FunctionType.md)
+- [IndexAccessType](type-aliases/IndexAccessType.md)
+- [IntersectionType](type-aliases/IntersectionType.md)
+- [LiteralType](type-aliases/LiteralType.md)
+- [PartialMappedType](type-aliases/PartialMappedType.md)
+- [PrimitiveType](type-aliases/PrimitiveType.md)
+- [PromiseTypeWithObject](type-aliases/PromiseTypeWithObject.md)
+- [PromiseTypeWithSymbol](type-aliases/PromiseTypeWithSymbol.md)
+- [QueryType](type-aliases/QueryType.md)
+- [ReadonlyMappedType](type-aliases/ReadonlyMappedType.md)
+- [StringLiteralType](type-aliases/StringLiteralType.md)
+- [Stuff](type-aliases/Stuff.md)
+- [TupleType](type-aliases/TupleType.md)
+- [TypeDefOptions](type-aliases/TypeDefOptions.md)
+- [TypeWithExternalSymbolLinkMapping](type-aliases/TypeWithExternalSymbolLinkMapping.md)
+- [TypeWithReturns](type-aliases/TypeWithReturns.md)
+- [TypeWithTypeParams](type-aliases/TypeWithTypeParams.md)
+- [UnionType](type-aliases/UnionType.md)
+- [UnionTypeWithTemplateStrings](type-aliases/UnionTypeWithTemplateStrings.md)
+- [UsefulUnionType](type-aliases/UsefulUnionType.md)
+
+## Variables
+
+- [objectLiteralVariable](variables/objectLiteralVariable.md)
+- [objectWithSymbol](variables/objectWithSymbol.md)
+- [someQuery](variables/someQuery.md)
+- [stringVariable](variables/stringVariable.md)
+- [templateVariableString](variables/templateVariableString.md)
+- [typedef](variables/typedef.md)
+- [typeOperatorVariable](variables/typeOperatorVariable.md)
+
+## Functions
+
+- [basicFunction](functions/basicFunction.md)
+- [basicFunctionWithReturns](functions/basicFunctionWithReturns.md)
+- [curriedFunction](functions/curriedFunction.md)
+- [functionReturningAFunction](functions/functionReturningAFunction.md)
+- [functionReturningAnObject](functions/functionReturningAnObject.md)
+- [functionReturningAPromise](functions/functionReturningAPromise.md)
+- [functionReturningAString](functions/functionReturningAString.md)
+- [functionReturningAUnionType](functions/functionReturningAUnionType.md)
+- [functionWithArrayOfOptionalStuff](functions/functionWithArrayOfOptionalStuff.md)
+- [functionWithArrayOfStuff](functions/functionWithArrayOfStuff.md)
+- [functionWithArrayOfUnionStuff](functions/functionWithArrayOfUnionStuff.md)
+- [functionWithComplexParams](functions/functionWithComplexParams.md)
+- [functionWithDefaultParameters](functions/functionWithDefaultParameters.md)
+- [functionWithMultipleSignatures](functions/functionWithMultipleSignatures.md)
+- [functionWithNamedParams](functions/functionWithNamedParams.md)
+- [functionWithNestedParameters](functions/functionWithNestedParameters.md)
+- [functionWithOptionalParameters](functions/functionWithOptionalParameters.md)
+- [functionWithRestParams](functions/functionWithRestParams.md)
+- [functionWithTypeParameters](functions/functionWithTypeParameters.md)
+- [functionWithUnionParams](functions/functionWithUnionParams.md)
+- [tupleTypeFunction](functions/tupleTypeFunction.md)
+- [tupleTypeFunctionInlineExplicit](functions/tupleTypeFunctionInlineExplicit.md)
+- [tupleTypeFunctionOptional](functions/tupleTypeFunctionOptional.md)
+"
+`;
+
+exports[`Indexes Modules should compile project index for "modules": (Output File Strategy "modules") (Option Group "1") 1`] = `
+"# typedoc-stubs
+
+## Modules
+
+- ["/Test/Module/Name"](Test_Module_Name.md)
+- [@scope/namespace](namespace.md)
+- [module-1/submodules/submodule-1](module-1/submodules/submodule-1.md)
+- [module-1/submodules/submodule-2](module-1/submodules/submodule-2.md)
+- [module-1/submodules/submodule-3-with-modules/nested-submodule-1](module-1/submodules/submodule-3-with-modules/nested-submodule-1.md)
+- [module-1/submodules/submodule-3-with-modules/nested-submodule-2](module-1/submodules/submodule-3-with-modules/nested-submodule-2.md)
+- [module-2](module-2.md)
+"
+`;

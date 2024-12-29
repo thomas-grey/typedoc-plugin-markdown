@@ -1,5 +1,10 @@
 import { MarkdownThemeContext } from '@plugin/theme/index.js';
-import { DeclarationReflection, ReflectionKind } from 'typedoc';
+import {
+  DeclarationReflection,
+  Reflection,
+  ReflectionCategory,
+  ReflectionKind,
+} from 'typedoc';
 
 export function pageTitle(this: MarkdownThemeContext): string {
   const textContentMappings = this.options.getValue('textContentMappings');
@@ -8,6 +13,7 @@ export function pageTitle(this: MarkdownThemeContext): string {
   const indexPageTitle: any = hasCustomPageTitle
     ? pageTitleTemplates['index']
     : textContentMappings['title.indexPage'];
+  const categoryPageTitle: any = pageTitleTemplates['category'];
   const modulePageTitle: any = hasCustomPageTitle
     ? pageTitleTemplates['module']
     : textContentMappings['title.modulePage'];
@@ -17,7 +23,7 @@ export function pageTitle(this: MarkdownThemeContext): string {
 
   const page = this.page;
 
-  if (page.model?.url === page.project.url) {
+  if ((page.model as Reflection)?.url === page.project.url) {
     if (typeof indexPageTitle === 'string') {
       return this.helpers.getProjectName(indexPageTitle, page);
     }
@@ -30,6 +36,16 @@ export function pageTitle(this: MarkdownThemeContext): string {
   const name = this.partials.memberTitle(page.model as DeclarationReflection);
   const kind = this.internationalization.kindSingularString(page.model.kind);
   const group = page.group;
+
+  if (page.model instanceof ReflectionCategory) {
+    if (typeof categoryPageTitle === 'string') {
+      return getFromString(categoryPageTitle, name, this.i18n.theme_category());
+    }
+    return categoryPageTitle({
+      name,
+      kind: this.i18n.theme_category(),
+    });
+  }
 
   if (
     [ReflectionKind.Module, ReflectionKind.Namespace].includes(page.model.kind)

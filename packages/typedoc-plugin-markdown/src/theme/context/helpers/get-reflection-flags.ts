@@ -7,25 +7,25 @@ export function getReflectionFlags(
   reflectionFlags: ReflectionFlags,
 ): string {
   const result: string[] = [];
-  if (reflectionFlags.isAbstract) {
+  if (reflectionFlags?.isAbstract) {
     result.push(backTicks('abstract'));
   }
-  if (reflectionFlags.isConst) {
+  if (reflectionFlags?.isConst) {
     result.push(backTicks('const'));
   }
-  if (reflectionFlags.isPrivate) {
+  if (reflectionFlags?.isPrivate) {
     result.push(backTicks('private'));
   }
-  if (reflectionFlags.isProtected) {
+  if (reflectionFlags?.isProtected) {
     result.push(backTicks('protected'));
   }
-  if (reflectionFlags.isReadonly) {
+  if (reflectionFlags?.isReadonly) {
     result.push(backTicks('readonly'));
   }
-  if (reflectionFlags.isStatic) {
+  if (reflectionFlags?.isStatic) {
     result.push(backTicks('static'));
   }
-  if (reflectionFlags.isOptional) {
+  if (reflectionFlags?.isOptional) {
     result.push(backTicks('optional'));
   }
   return result.join(' ');

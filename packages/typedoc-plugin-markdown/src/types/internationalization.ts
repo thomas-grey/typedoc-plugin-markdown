@@ -8,6 +8,8 @@
  * The model of translatable strings specific to the Markdown theme.
  */
 export interface TranslatableStrings {
+  theme_category: string;
+  theme_categories: string;
   theme_default_value: string;
   theme_default_type: string;
   theme_description: string;

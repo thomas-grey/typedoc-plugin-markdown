@@ -38,7 +38,7 @@ export function memberTitle(
     );
   }
 
-  if (model.flags.isOptional) {
+  if (model.flags?.isOptional) {
     name.push('?');
   }
 

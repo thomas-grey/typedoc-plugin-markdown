@@ -59,6 +59,8 @@ import { ManuallyValidatedOption } from 'typedoc'`);
 
   export namespace Internationalization {
       export interface TranslatableStrings {
+        theme_category: [];
+        theme_categories: [];
         theme_default_value: [];
         theme_default_type: [];
         theme_description: [];

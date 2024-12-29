@@ -390,6 +390,48 @@ const config = {
       },
     ],
   },
+  categories: {
+    only: true,
+    entryPoints: [
+      '/categories/module-1.ts',
+      '/categories/module-2.ts',
+      '/categories/module-3.ts',
+    ],
+    outputFileStrategies: ['categories'],
+    commonOptions: {
+      disableSources: true,
+      readme: 'none',
+      categorizeByGroup: false,
+      name: 'categories-out',
+    },
+    options: [
+      {
+        plugin: [
+          path.join(__dirname, 'custom-plugins', 'navigation-plugin.mjs'),
+          path.join(__dirname, 'custom-plugins', 'urls-plugin.mjs'),
+        ],
+      },
+    ],
+  },
+  categoriesSingleModule: {
+    only: true,
+    entryPoints: ['/categories/module-2.ts'],
+    outputFileStrategies: ['categories'],
+    commonOptions: {
+      disableSources: true,
+      readme: 'none',
+      name: 'categories-out-single-module',
+    },
+    options: [
+      {
+        indexFormat: 'table',
+        plugin: [
+          path.join(__dirname, 'custom-plugins', 'navigation-plugin.mjs'),
+          path.join(__dirname, 'custom-plugins', 'urls-plugin.mjs'),
+        ],
+      },
+    ],
+  },
 };
 
 export default config;

@@ -4,9 +4,14 @@
  * @module
  */
 import { getTranslatable } from '@plugin/internationalization/translatable.js';
-import { declarations } from '@plugin/options/index.js';
+import {
+  declarations,
+  globallyValidateOptions,
+} from '@plugin/options/index.js';
 import { resolvePackages } from '@plugin/renderer/packages.js';
-import { MarkdownRendererHooks, MarkdownTheme } from 'public-api.js';
+import { render } from '@plugin/renderer/render.js';
+import { MarkdownTheme } from '@plugin/theme/index.js';
+import { MarkdownRendererHooks } from '@plugin/types/index.js';
 import {
   Application,
   Context,
@@ -16,7 +21,6 @@ import {
   ParameterHint,
   ParameterType,
 } from 'typedoc';
-import { render } from './renderer/render.js';
 /**
  * The function that is called by TypeDoc to bootstrap the plugin.
  *
@@ -39,13 +43,15 @@ export function load(app: Application) {
     } as DeclarationOption);
   });
 
-  app.renderer.defineTheme('markdown', MarkdownTheme);
+  // Validate options globally before conversion.
+  globallyValidateOptions(app);
 
   /**
    * =============================
    * 2. Configure markdown outputs
    * =============================
    */
+
   app.options.addDeclaration({
     name: 'markdown',
     outputShortcut: 'markdown',
@@ -64,6 +70,8 @@ export function load(app: Application) {
   Object.defineProperty(app.renderer, 'markdownHooks', {
     value: new EventHooks<MarkdownRendererHooks, string>(),
   });
+
+  app.renderer.defineTheme('markdown', MarkdownTheme);
 
   /**
    * =========================
