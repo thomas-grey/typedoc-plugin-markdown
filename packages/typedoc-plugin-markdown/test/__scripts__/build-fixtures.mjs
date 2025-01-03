@@ -42,21 +42,22 @@ async function main() {
 
   // Create tasks for each fixture with limited concurrency
   const tasks = fixturesToBuild.map(([key, config]) =>
-    limit(() => processFixture(key, config)),
+    limit(() => processFixture(key, config, filtered?.length > 0)),
   );
 
   // Run all tasks and wait for completion
   await Promise.all(tasks);
 }
 
-async function processFixture(key, config) {
+async function processFixture(key, config, writeHTML) {
   consola.info(`[${getPackageName()}] Building "${key}" fixture(s)`);
   const outputFileStrategies = config.outputFileStrategies || [
     'members',
     'modules',
   ];
-
-  //writeHtml(key, config.entryPoints);
+  if (writeHTML) {
+    writeHtml(key, config.entryPoints);
+  }
   outputFileStrategies.forEach((outputFileStrategy) => {
     config.options.forEach((optionGroup, index) => {
       const options = {

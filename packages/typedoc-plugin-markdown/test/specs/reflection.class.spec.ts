@@ -92,12 +92,7 @@ describe(`Class Reflection`, () => {
   });
 
   test(`should compile hierarchy for GrandChildClassA`, () => {
-    expectFileToEqual(
-      'reflections',
-      'members',
-      'classes/GrandChildClassA.md',
-      1,
-    );
+    expectFileToEqual('reflections', 'members', 'classes/GrandChildClassA.md');
   });
 
   test(`should compile class with prop categories`, () => {
@@ -105,7 +100,6 @@ describe(`Class Reflection`, () => {
       'reflections',
       'members',
       'classes/ClassWithPropCategories.md',
-      1,
     );
   });
 
@@ -114,7 +108,6 @@ describe(`Class Reflection`, () => {
       'reflections',
       'members',
       'classes/ClassWithoutPropCategories.md',
-      1,
     );
   });
 
@@ -123,7 +116,6 @@ describe(`Class Reflection`, () => {
       'reflections',
       'members',
       'classes/ClassWithAccessorKeywords.md',
-      1,
     );
   });
 });

@@ -53,6 +53,7 @@ declare module 'typedoc' {
     propertyMembersFormat: 'list' | 'table' | 'htmlTable';
     publicPath: string;
     sanitizeComments: boolean;
+    showInlineIndexes: boolean;
     tableColumnSettings: {
       hideDefaults: boolean;
       hideInherited: boolean;

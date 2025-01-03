@@ -297,6 +297,16 @@ export const hideGroupHeadings: Partial<DeclarationOption> = {
   type: ParameterType.Boolean,
   defaultValue: false,
 };
+/**
+ * This option displays inline indexes for Interfaces, Classes and Enums for easier discoverability of long sections.
+ *
+ * @category Display
+ */
+export const showInlineIndexes: Partial<DeclarationOption> = {
+  help: 'Show inline indexes for Interfaces, Classes and Enums.',
+  type: ParameterType.Boolean,
+  defaultValue: false,
+};
 
 /**
  * @deprecated

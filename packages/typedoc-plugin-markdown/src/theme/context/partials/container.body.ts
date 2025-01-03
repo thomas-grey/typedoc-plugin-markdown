@@ -1,8 +1,8 @@
+import { heading, horizontalRule } from '@plugin/libs/markdown/index.js';
 import { MarkdownThemeContext } from '@plugin/theme/index.js';
 import {
   ContainerReflection,
   DeclarationReflection,
-  DocumentReflection,
   ReflectionKind,
 } from 'typedoc';
 
@@ -37,30 +37,31 @@ export function body(
           }),
         );
       } else {
-        if (model.children) {
-          const groupChildren = model.groups
-            ?.filter(
-              (group) =>
-                !(group.owningReflection instanceof DocumentReflection),
-            )
-            .reduce((acc, group) => {
-              return [...acc, ...group.children];
-            }, []);
-          md.push(
-            this.partials.members(groupChildren as DeclarationReflection[], {
-              headingLevel: options.headingLevel,
-            }),
-          );
+        if (model.groups?.length) {
+          model.groups.forEach((group, i) => {
+            if (group.allChildrenHaveOwnDocument()) {
+              md.push(heading(options.headingLevel, group.title));
+              md.push(this.partials.groupIndex(group));
+            } else {
+              md.push(
+                this.partials.members(
+                  group.children as DeclarationReflection[],
+                  {
+                    headingLevel: options.headingLevel,
+                  },
+                ),
+              );
+              if (model.groups && i < model.groups?.length - 1) {
+                md.push(horizontalRule());
+              }
+            }
+          });
         }
       }
     } else {
-      const groups = model.groups?.filter(
-        (group) => !(group.owningReflection instanceof DocumentReflection),
-      );
-
-      if (groups?.length) {
+      if (model.groups?.length) {
         md.push(
-          this.partials.groups(groups, {
+          this.partials.groups(model, {
             headingLevel: options.headingLevel,
             kind: model.kind,
           }),

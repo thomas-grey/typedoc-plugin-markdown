@@ -185,6 +185,11 @@ export interface PluginOptions {
   sanitizeComments: boolean;
 
   /**
+   * Show inline indexes for Interfaces, Classes and Enums.
+   */
+  showInlineIndexes: boolean;
+
+  /**
    * Control how table columns are configured and displayed.
    */
   tableColumnSettings: {

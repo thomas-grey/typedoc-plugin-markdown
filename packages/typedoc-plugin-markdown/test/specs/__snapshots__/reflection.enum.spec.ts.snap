@@ -36,6 +36,13 @@ Defined in: [enums.ts:1](http://source-url)
 
 Comments for enum
 
+## Index
+
+### Enumeration Members
+
+- [MemberA](BasicEnum.md#membera)
+- [MemberB](BasicEnum.md#memberb)
+
 ## Enumeration Members
 
 | Enumeration Member | Value | Description |
@@ -76,6 +83,13 @@ exports[`Enum Reflection should compile enum with values: (Output File Strategy 
 Defined in: [enums.ts:1](http://source-url)
 
 Comments for enum
+
+## Index
+
+### Enumeration Members
+
+- [MemberA](EnumWithValues.md#membera)
+- [MemberB](EnumWithValues.md#memberb)
 
 ## Enumeration Members
 

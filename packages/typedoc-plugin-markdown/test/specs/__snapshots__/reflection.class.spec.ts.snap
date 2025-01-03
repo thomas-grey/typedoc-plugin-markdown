@@ -56,6 +56,20 @@ Defined in: [classes.ts:1](http://source-url)
 - [\`DerivedClassA\`](DerivedClassA.md)
 - [\`DerivedClassB\`](DerivedClassB.md)
 
+## Index
+
+### Constructors
+
+- [new AbstractClass()](AbstractClass.md#new-abstractclass)
+
+### Properties
+
+- [abstractProp](AbstractClass.md#abstractprop)
+
+### Methods
+
+- [abstractMethod()](AbstractClass.md#abstractmethod)
+
 ## Constructors
 
 ### new AbstractClass()
@@ -142,6 +156,20 @@ Defined in: [classes.ts:1](http://source-url)
 
 Comments for BasicClass
 
+## Index
+
+### Constructors
+
+- [new BasicClass()](BasicClass.md#new-basicclass)
+
+### Properties
+
+- [prop](BasicClass.md#prop)
+
+### Methods
+
+- [method()](BasicClass.md#method)
+
 ## Constructors
 
 ### new BasicClass()
@@ -188,6 +216,71 @@ Defined in: [classes.ts:1](http://source-url)
 ### new ClassWithAccessorKeywords()
 
 > **new ClassWithAccessorKeywords**(): [\`ClassWithAccessorKeywords\`](ClassWithAccessorKeywords.md)
+
+#### Returns
+
+[\`ClassWithAccessorKeywords\`](ClassWithAccessorKeywords.md)
+
+## Accessors
+
+### accessor1
+
+Defined in: [classes.ts:1](http://source-url)
+
+Accessor comments
+
+#### Example
+
+\`\`\`ts
+const x = 1;
+\`\`\`
+
+***
+
+### accessor2
+
+Defined in: [classes.ts:1](http://source-url)
+
+Accessor comments
+
+#### Remarks
+
+Remark comments
+
+***
+
+### accessor3
+
+Defined in: [classes.ts:1](http://source-url)
+
+Accessor comments
+"
+`;
+
+exports[`Class Reflection should compile class with accessor keywords: (Output File Strategy "members") (Option Group "2") 1`] = `
+"# Class: ClassWithAccessorKeywords
+
+Defined in: [classes.ts:1](http://source-url)
+
+## Index
+
+### Constructors
+
+- [new ClassWithAccessorKeywords()](ClassWithAccessorKeywords.md#new-classwithaccessorkeywords)
+
+### Accessors
+
+- [accessor1](ClassWithAccessorKeywords.md#accessor1)
+- [accessor2](ClassWithAccessorKeywords.md#accessor2)
+- [accessor3](ClassWithAccessorKeywords.md#accessor3)
+
+## Constructors
+
+### new ClassWithAccessorKeywords()
+
+\`\`\`ts
+new ClassWithAccessorKeywords(): ClassWithAccessorKeywords
+\`\`\`
 
 #### Returns
 
@@ -332,6 +425,22 @@ exports[`Class Reflection should compile class with accessors: (Output File Stra
 Defined in: [classes.ts:1](http://source-url)
 
 Comments for ClassWithAccessors
+
+## Index
+
+### Constructors
+
+- [new ClassWithAccessors()](ClassWithAccessors.md#new-classwithaccessors)
+
+### Properties
+
+- [privateProp](ClassWithAccessors.md#privateprop)
+
+### Accessors
+
+- [accessor](ClassWithAccessors.md#accessor)
+- [noGetter](ClassWithAccessors.md#nogetter)
+- [noSetter](ClassWithAccessors.md#nosetter)
 
 ## Constructors
 
@@ -485,6 +594,16 @@ Defined in: [classes.ts:1](http://source-url)
 
 Comments for ClassWithComplexProps
 
+## Index
+
+### Constructors
+
+- [new ClassWithComplexProps()](ClassWithComplexProps.md#new-classwithcomplexprops)
+
+### Properties
+
+- [objecLiteralProp](ClassWithComplexProps.md#objecliteralprop)
+
 ## Constructors
 
 ### new ClassWithComplexProps()
@@ -580,6 +699,12 @@ exports[`Class Reflection should compile class with constructor overloads: (Outp
 Defined in: [classes.ts:1](http://source-url)
 
 Comments for ClassWithConstructorOverloads
+
+## Index
+
+### Constructors
+
+- [new ClassWithConstructorOverloads()](ClassWithConstructorOverloads.md#new-classwithconstructoroverloads)
 
 ## Constructors
 
@@ -713,6 +838,22 @@ exports[`Class Reflection should compile class with flags: (Output File Strategy
 Defined in: [classes.ts:1](http://source-url)
 
 Comment for ClassWithFlags
+
+## Index
+
+### Constructors
+
+- [new ClassWithFlags()](ClassWithFlags.md#new-classwithflags)
+
+### Properties
+
+- [expermintalProp](ClassWithFlags.md#expermintalprop)
+- [internalProp](ClassWithFlags.md#internalprop)
+
+### Methods
+
+- [expermintalMethod()](ClassWithFlags.md#expermintalmethod)
+- [internalMethod()](ClassWithFlags.md#internalmethod)
 
 ## Constructors
 
@@ -885,6 +1026,26 @@ Defined in: [classes.ts:1](http://source-url)
 
 Comments for ClassWithModifiers
 
+## Index
+
+### Constructors
+
+- [new ClassWithModifiers()](ClassWithModifiers.md#new-classwithmodifiers)
+
+### Properties
+
+- [privateProp](ClassWithModifiers.md#privateprop)
+- [protectedProp](ClassWithModifiers.md#protectedprop)
+- [publicPropWithDefault](ClassWithModifiers.md#publicpropwithdefault)
+- [readonlyProp](ClassWithModifiers.md#readonlyprop)
+- [staticProp](ClassWithModifiers.md#staticprop)
+
+### Methods
+
+- [privateMethod()](ClassWithModifiers.md#privatemethod)
+- [publicMethod()](ClassWithModifiers.md#publicmethod)
+- [staticMethod()](ClassWithModifiers.md#staticmethod)
+
 ## Constructors
 
 ### new ClassWithModifiers()
@@ -1028,6 +1189,102 @@ Defined in: [classes.ts:1](http://source-url)
 "
 `;
 
+exports[`Class Reflection should compile class with prop categories: (Output File Strategy "members") (Option Group "2") 1`] = `
+"# Class: ClassWithPropCategories
+
+Defined in: [classes.ts:1](http://source-url)
+
+## Index
+
+### Constructors
+
+- [new ClassWithPropCategories()](ClassWithPropCategories.md#new-classwithpropcategories)
+
+### CatA
+
+- [prop1](ClassWithPropCategories.md#prop1)
+
+### CatB
+
+- [prop2](ClassWithPropCategories.md#prop2)
+
+### Other
+
+- [method1()](ClassWithPropCategories.md#method1)
+- [method2()](ClassWithPropCategories.md#method2)
+
+## Constructors
+
+### new ClassWithPropCategories()
+
+\`\`\`ts
+new ClassWithPropCategories(opts: object): ClassWithPropCategories
+\`\`\`
+
+Defined in: [classes.ts:1](http://source-url)
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| \`opts\` | \\{ \`a\`: \`string\`; \`b\`: \`string\`; \\} |
+| \`opts.a\` | \`string\` |
+| \`opts.b\` | \`string\` |
+
+#### Returns
+
+[\`ClassWithPropCategories\`](ClassWithPropCategories.md)
+
+## CatA
+
+### prop1
+
+\`\`\`ts
+prop1: string;
+\`\`\`
+
+Defined in: [classes.ts:1](http://source-url)
+
+## CatB
+
+### prop2
+
+\`\`\`ts
+prop2: string;
+\`\`\`
+
+Defined in: [classes.ts:1](http://source-url)
+
+## Other
+
+### method1()
+
+\`\`\`ts
+method1(): void
+\`\`\`
+
+Defined in: [classes.ts:1](http://source-url)
+
+#### Returns
+
+\`void\`
+
+***
+
+### method2()
+
+\`\`\`ts
+method2(): void
+\`\`\`
+
+Defined in: [classes.ts:1](http://source-url)
+
+#### Returns
+
+\`void\`
+"
+`;
+
 exports[`Class Reflection should compile class with simple props: (Output File Strategy "members") (Option Group "1") 1`] = `
 "# Class: ClassWithSimpleProps
 
@@ -1106,6 +1363,19 @@ exports[`Class Reflection should compile class with simple props: (Output File S
 Defined in: [classes.ts:1](http://source-url)
 
 Comments for ClassWithSimpleProps
+
+## Index
+
+### Constructors
+
+- [new ClassWithSimpleProps()](ClassWithSimpleProps.md#new-classwithsimpleprops)
+
+### Properties
+
+- [propA](ClassWithSimpleProps.md#propa)
+- [propB](ClassWithSimpleProps.md#propb)
+- [propC](ClassWithSimpleProps.md#propc)
+- [propD](ClassWithSimpleProps.md#propd)
 
 ## Constructors
 
@@ -1217,6 +1487,12 @@ Comments for ClassWithTypeParameters
 | \`B\` *extends* \`string\` | - | Comments for param B |
 | \`C\` | \`boolean\` | Comments for param C |
 
+## Index
+
+### Constructors
+
+- [new ClassWithTypeParameters()](ClassWithTypeParameters.md#new-classwithtypeparameters)
+
 ## Constructors
 
 ### new ClassWithTypeParameters()
@@ -1302,6 +1578,86 @@ Defined in: [classes.ts:1](http://source-url)
 "
 `;
 
+exports[`Class Reflection should compile class without prop categories: (Output File Strategy "members") (Option Group "2") 1`] = `
+"# Class: ClassWithoutPropCategories
+
+Defined in: [classes.ts:1](http://source-url)
+
+## Index
+
+### Constructors
+
+- [new ClassWithoutPropCategories()](ClassWithoutPropCategories.md#new-classwithoutpropcategories)
+
+### Properties
+
+- [prop1](ClassWithoutPropCategories.md#prop1)
+- [prop2](ClassWithoutPropCategories.md#prop2)
+
+### Methods
+
+- [method1()](ClassWithoutPropCategories.md#method1)
+- [method2()](ClassWithoutPropCategories.md#method2)
+
+## Constructors
+
+### new ClassWithoutPropCategories()
+
+\`\`\`ts
+new ClassWithoutPropCategories(opts: object): ClassWithoutPropCategories
+\`\`\`
+
+Defined in: [classes.ts:1](http://source-url)
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| \`opts\` | \\{ \`a\`: \`string\`; \`b\`: \`string\`; \\} |
+| \`opts.a\` | \`string\` |
+| \`opts.b\` | \`string\` |
+
+#### Returns
+
+[\`ClassWithoutPropCategories\`](ClassWithoutPropCategories.md)
+
+## Properties
+
+| Property | Type |
+| :------ | :------ |
+| <a id="prop1"></a> \`prop1\` | \`string\` |
+| <a id="prop2"></a> \`prop2\` | \`string\` |
+
+## Methods
+
+### method1()
+
+\`\`\`ts
+method1(): void
+\`\`\`
+
+Defined in: [classes.ts:1](http://source-url)
+
+#### Returns
+
+\`void\`
+
+***
+
+### method2()
+
+\`\`\`ts
+method2(): void
+\`\`\`
+
+Defined in: [classes.ts:1](http://source-url)
+
+#### Returns
+
+\`void\`
+"
+`;
+
 exports[`Class Reflection should compile derived class: (Output File Strategy "members") (Option Group "1") 1`] = `
 "# Class: DerivedClassA
 
@@ -1325,7 +1681,7 @@ Comments for DerivedClassA
 
 #### Inherited from
 
-[\`AbstractClass\`](AbstractClass.md).[\`constructor\`](AbstractClass.md#constructors)
+[\`AbstractClass\`](AbstractClass.md).[\`constructor\`](AbstractClass.md#new-abstractclass)
 
 ## Properties
 
@@ -1392,6 +1748,22 @@ Comments for DerivedClassA
 
 - [\`AbstractClass\`](AbstractClass.md)
 
+## Index
+
+### Constructors
+
+- [new DerivedClassA()](DerivedClassA.md#new-derivedclassa)
+
+### Properties
+
+- [abstractProp](DerivedClassA.md#abstractprop)
+- [derivedProp](DerivedClassA.md#derivedprop)
+
+### Methods
+
+- [abstractMethod()](DerivedClassA.md#abstractmethod)
+- [derivedMethod()](DerivedClassA.md#derivedmethod)
+
 ## Constructors
 
 ### new DerivedClassA()
@@ -1406,7 +1778,7 @@ new DerivedClassA(): DerivedClassA
 
 #### Inherited from
 
-[\`AbstractClass\`](AbstractClass.md).[\`constructor\`](AbstractClass.md#constructors)
+[\`AbstractClass\`](AbstractClass.md).[\`constructor\`](AbstractClass.md#new-abstractclass)
 
 ## Properties
 
@@ -1536,7 +1908,7 @@ Defined in: [classes.ts:1](http://source-url)
 
 #### Inherited from
 
-[\`BaseClass\`](BaseClass.md).[\`constructor\`](BaseClass.md#constructors)
+[\`BaseClass\`](BaseClass.md).[\`constructor\`](BaseClass.md#new-baseclass)
 "
 `;
 
@@ -1561,6 +1933,39 @@ Defined in: [classes.ts:1](http://source-url)
 
 #### Inherited from
 
-[\`ChildClassA\`](ChildClassA.md).[\`constructor\`](ChildClassA.md#constructors)
+[\`ChildClassA\`](ChildClassA.md).[\`constructor\`](ChildClassA.md#new-childclassa)
+"
+`;
+
+exports[`Class Reflection should compile hierarchy for GrandChildClassA: (Output File Strategy "members") (Option Group "2") 1`] = `
+"# Class: GrandChildClassA
+
+Defined in: [classes.ts:1](http://source-url)
+
+## Extends
+
+- [\`ChildClassA\`](ChildClassA.md)
+
+## Index
+
+### Constructors
+
+- [new GrandChildClassA()](GrandChildClassA.md#new-grandchildclassa)
+
+## Constructors
+
+### new GrandChildClassA()
+
+\`\`\`ts
+new GrandChildClassA(): GrandChildClassA
+\`\`\`
+
+#### Returns
+
+[\`GrandChildClassA\`](GrandChildClassA.md)
+
+#### Inherited from
+
+[\`ChildClassA\`](ChildClassA.md).[\`constructor\`](ChildClassA.md#new-childclassa)
 "
 `;

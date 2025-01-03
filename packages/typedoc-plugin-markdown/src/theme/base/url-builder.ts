@@ -523,7 +523,10 @@ export class UrlBuilder {
     );
   }
 
-  private applyAnchorUrl(reflection: Reflection, containerUrl: string) {
+  private applyAnchorUrl(
+    reflection: DeclarationReflection,
+    containerUrl: string,
+  ) {
     const anchorPrefix = this.options.getValue('anchorPrefix');
     const anchorId = this.getAnchorId(reflection);
 
@@ -573,7 +576,7 @@ export class UrlBuilder {
     }
   }
 
-  private getAnchorId(reflection: Reflection) {
+  private getAnchorId(reflection: DeclarationReflection) {
     const preserveAnchorCasing = this.options.getValue('preserveAnchorCasing');
 
     const anchorName = this.getAnchorName(reflection);
@@ -585,12 +588,15 @@ export class UrlBuilder {
     return null;
   }
 
-  private getAnchorName(reflection: Reflection) {
+  private getAnchorName(reflection: DeclarationReflection) {
     if ([ReflectionKind.TypeParameter].includes(reflection.kind)) {
       return null;
     }
-    if (reflection.kind === ReflectionKind.Constructor) {
-      return 'Constructors';
+    if (
+      reflection.kind === ReflectionKind.Constructor &&
+      reflection.signatures
+    ) {
+      return `new-${reflection.signatures[0].name}`;
     }
     const anchorParts = [reflection.name.replace(/[\\[\]]/g, '')];
     const typeParams = (reflection as DeclarationReflection)?.typeParameters;

@@ -8,13 +8,18 @@ import {
 
 export function categories(
   this: MarkdownThemeContext,
-  model: ReflectionCategory[],
+  models: ReflectionCategory[],
   options: { headingLevel: number },
 ) {
   const md: string[] = [];
-  model
-    ?.filter((category) => !category.allChildrenHaveOwnDocument())
-    .forEach((category) => {
+  models.forEach((category) => {
+    if (category.allChildrenHaveOwnDocument()) {
+      md.push(heading(options.headingLevel, category.title));
+      if (category.description) {
+        md.push(this.helpers.getCommentParts(category.description));
+      }
+      md.push(this.partials.groupIndex(category));
+    } else {
       const categoryChildren = category.children?.filter(
         (child) => child.kind !== ReflectionKind.Constructor,
       );
@@ -29,6 +34,7 @@ export function categories(
           }),
         );
       }
-    });
+    }
+  });
   return md.join('\n\n');
 }

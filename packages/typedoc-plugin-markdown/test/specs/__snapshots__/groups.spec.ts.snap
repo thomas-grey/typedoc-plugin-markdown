@@ -420,6 +420,20 @@ exports[`Groups should compile basic module index page: (Output File Strategy "m
 
 A basic module
 
+## Index
+
+- [functionA()](basic.md#functiona)
+- [InterfaceA](basic.md#interfacea)
+- [InterfaceB](basic.md#interfaceb)
+- [ClassA](basic.md#classa)
+- [ClassB](basic.md#classb)
+- [EnumA](basic.md#enuma)
+- [EnumB](basic.md#enumb)
+- [TypeA](basic.md#typea)
+- [TypeB](basic.md#typeb)
+- [variableA](basic.md#variablea)
+- [variableB](basic.md#variableb)
+
 <a id="functiona"></a>
 
 ## functionA()
@@ -447,6 +461,11 @@ Block tag content.
 
 - [InterfaceB.propA](basic.md#propa-1)
 
+### Index
+
+- [propA](basic.md#propa)
+- [propB](basic.md#propb)
+
 ### Properties
 
 <a id="propa"></a>
@@ -471,6 +490,11 @@ InterfaceB function.
 
 - [InterfaceA.propA](basic.md#propa)
 
+### Index
+
+- [propA](basic.md#propa-1)
+- [propB](basic.md#propb-1)
+
 ### Properties
 
 <a id="propa-1"></a>
@@ -493,9 +517,13 @@ InterfaceB function.
 
 ClassA function.
 
+### Index
+
+- [new ClassA()](basic.md#new-classa)
+
 ### Constructors
 
-<a id="constructors"></a>
+<a id="new-classa"></a>
 
 #### new ClassA()
 
@@ -507,9 +535,13 @@ _SIGNATURE_MEMBER_PARTIAL_
 
 ## ClassB
 
+### Index
+
+- [new ClassB()](basic.md#new-classb)
+
 ### Constructors
 
-<a id="constructors-1"></a>
+<a id="new-classb"></a>
 
 #### new ClassB()
 
@@ -658,6 +690,32 @@ exports[`Groups should compile categories group page: (Output File Strategy "mod
 # has-categories
 
 A module that contains categories
+
+## Index
+
+### Category A
+
+- [CategoryAEnum1](has-categories.md#categoryaenum1)
+- [CategoryAEnum2](has-categories.md#categoryaenum2)
+- [CategoryAInterface1](has-categories.md#categoryainterface1)
+- [CategoryAInterface2](has-categories.md#categoryainterface2)
+
+### Category B
+
+- [CategoryBEnum1](has-categories.md#categorybenum1)
+- [CategoryBEnum2](has-categories.md#categorybenum2)
+- [CategoryBInterface1](has-categories.md#categorybinterface1)
+- [CategoryBInterface2](has-categories.md#categorybinterface2)
+
+### Category C
+
+- [CategoryCInterface1](has-categories.md#categorycinterface1)
+
+### Other
+
+- [UnCategorizedEnum](has-categories.md#uncategorizedenum)
+- [CategoryCInterface2](has-categories.md#categorycinterface2)
+- [UnCategorizedInterace](has-categories.md#uncategorizedinterace)
 
 ## Category A
 
@@ -1050,6 +1108,13 @@ exports[`Groups should compile custom groups index page: (Output File Strategy "
 # has-custom-groups
 
 A module that contains custom groupings
+
+## Index
+
+- [variabelA](index.md#variabela)
+- [variableB1](index.md#variableb1)
+- [variableB2](index.md#variableb2)
+- [variableC](index.md#variablec)
 
 <a id="variabela"></a>
 
@@ -1505,6 +1570,12 @@ exports[`Groups should compile module index for a namespace: (Output File Strate
 
 # \\_Namespace\\_A\\_
 
+<a id="namespaceinterface"></a>
+
+## NamespaceInterface
+
+***
+
 ## Namespaces
 
 <table>
@@ -1529,10 +1600,6 @@ exports[`Groups should compile module index for a namespace: (Output File Strate
 </tr>
 </tbody>
 </table>
-
-<a id="namespaceinterface"></a>
-
-## NamespaceInterface
 "
 `;
 
@@ -1950,6 +2017,82 @@ exports[`Groups should compile module index with namespaces index page: (Output 
 
 A module that contains namespaces
 
+<a id="_function_a_"></a>
+
+## \\_function\\_A\\_()
+
+_SIGNATURE_MEMBER_PARTIAL_
+
+***
+
+<a id="functionb"></a>
+
+## functionB()
+
+_SIGNATURE_MEMBER_PARTIAL_
+
+***
+
+<a id="_interface_a_"></a>
+
+## \\_Interface\\_A\\_
+
+***
+
+<a id="interfaceb"></a>
+
+## InterfaceB
+
+***
+
+<a id="__class_a_"></a>
+
+## \\_\\_Class\\_A\\_
+
+### Index
+
+- [new \\_\\_Class\\_A\\_()](index.md#new-__class_a_)
+
+### Constructors
+
+<a id="new-__class_a_"></a>
+
+#### new \\_\\_Class\\_A\\_()
+
+_SIGNATURE_MEMBER_PARTIAL_
+
+***
+
+<a id="classb"></a>
+
+## ClassB
+
+### Index
+
+- [new ClassB()](index.md#new-classb)
+
+### Constructors
+
+<a id="new-classb"></a>
+
+#### new ClassB()
+
+_SIGNATURE_MEMBER_PARTIAL_
+
+***
+
+<a id="_enum_a_"></a>
+
+## \\_Enum\\_A\\_
+
+***
+
+<a id="enumb"></a>
+
+## EnumB
+
+***
+
 ## Namespaces
 
 <table>
@@ -1986,74 +2129,6 @@ A module that contains namespaces
 </tr>
 </tbody>
 </table>
-
-<a id="_function_a_"></a>
-
-## \\_function\\_A\\_()
-
-_SIGNATURE_MEMBER_PARTIAL_
-
-***
-
-<a id="functionb"></a>
-
-## functionB()
-
-_SIGNATURE_MEMBER_PARTIAL_
-
-***
-
-<a id="_interface_a_"></a>
-
-## \\_Interface\\_A\\_
-
-***
-
-<a id="interfaceb"></a>
-
-## InterfaceB
-
-***
-
-<a id="__class_a_"></a>
-
-## \\_\\_Class\\_A\\_
-
-### Constructors
-
-<a id="constructors"></a>
-
-#### new \\_\\_Class\\_A\\_()
-
-_SIGNATURE_MEMBER_PARTIAL_
-
-***
-
-<a id="classb"></a>
-
-## ClassB
-
-### Constructors
-
-<a id="constructors-1"></a>
-
-#### new ClassB()
-
-_SIGNATURE_MEMBER_PARTIAL_
-
-***
-
-<a id="_enum_a_"></a>
-
-## \\_Enum\\_A\\_
-
-***
-
-<a id="enumb"></a>
-
-## EnumB
-
-***
 
 <a id="_type_a_"></a>
 
@@ -2147,6 +2222,13 @@ exports[`Groups should compile references group page: (Output File Strategy "mod
 # has-references
 
 A module that contains references
+
+## Index
+
+- [defaultFunction()](has-references.md#defaultfunction)
+- [default](has-references.md#default)
+- [InterfaceA](has-references.md#interfacea)
+- [RenamedInterfaceB](has-references.md#renamedinterfaceb)
 
 <a id="defaultfunction"></a>
 

@@ -37,6 +37,7 @@ const config = {
         enumMembersFormat: 'table',
         propertyMembersFormat: 'table',
         indexFormat: 'table',
+        showInlineIndexes: true,
         useCodeBlocks: true,
         expandParameters: true,
         navigationModel: {
@@ -133,6 +134,7 @@ const config = {
         useHTMLAnchors: true,
         indexFormat: 'htmlTable',
         categorizeByGroup: false,
+        showInlineIndexes: true,
       },
     ],
   },
@@ -196,7 +198,10 @@ const config = {
       },
     },
     options: [
-      { entryFileName: 'index.md' },
+      {
+        entryFileName: 'index.md',
+        projectDocuments: ['./test/fixtures/PROJECT_DOC_1.md'],
+      },
       {
         excludeScopesInPaths: true,
         mergeReadme: true,

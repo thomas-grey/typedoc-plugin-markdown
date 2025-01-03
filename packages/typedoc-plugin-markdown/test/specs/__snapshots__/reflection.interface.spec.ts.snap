@@ -230,6 +230,21 @@ Comments for BasicInterface
 
 - [\`ExtendedInterface\`](ExtendedInterface.md)
 
+## Index
+
+### Properties
+
+- [~~deprecatedProp~~](BasicInterface.md#deprecatedprop)
+- [functionProp](BasicInterface.md#functionprop)
+- [optionalProp](BasicInterface.md#optionalprop)
+- [prop](BasicInterface.md#prop)
+- [propReturningObjectDeclaration](BasicInterface.md#propreturningobjectdeclaration)
+- [propReturningObjectDeclarations](BasicInterface.md#propreturningobjectdeclarations)
+- [propReturningSignatureDeclaration](BasicInterface.md#propreturningsignaturedeclaration)
+- [propReturningSignatureDeclarations](BasicInterface.md#propreturningsignaturedeclarations)
+- [propWithFunction](BasicInterface.md#propwithfunction)
+- [propWithProps](BasicInterface.md#propwithprops)
+
 ## Properties
 
 | Property | Type | Description |
@@ -533,6 +548,22 @@ Comments for ExtendedInterface
 
 - [\`BasicInterface\`](BasicInterface.md)
 
+## Index
+
+### Properties
+
+- [~~deprecatedProp~~](ExtendedInterface.md#deprecatedprop)
+- [extendedProp](ExtendedInterface.md#extendedprop)
+- [functionProp](ExtendedInterface.md#functionprop)
+- [optionalProp](ExtendedInterface.md#optionalprop)
+- [prop](ExtendedInterface.md#prop)
+- [propReturningObjectDeclaration](ExtendedInterface.md#propreturningobjectdeclaration)
+- [propReturningObjectDeclarations](ExtendedInterface.md#propreturningobjectdeclarations)
+- [propReturningSignatureDeclaration](ExtendedInterface.md#propreturningsignaturedeclaration)
+- [propReturningSignatureDeclarations](ExtendedInterface.md#propreturningsignaturedeclarations)
+- [propWithFunction](ExtendedInterface.md#propwithfunction)
+- [propWithProps](ExtendedInterface.md#propwithprops)
+
 ## Properties
 
 | Property | Type | Description | Inherited from |
@@ -586,6 +617,12 @@ exports[`Interface Reflection should compile indexable interface: (Output File S
 Defined in: [interfaces.ts:1](http://source-url)
 
 Comments for IndexableInterface
+
+## Index
+
+### Properties
+
+- [prop](IndexableInterface.md#prop)
 
 ## Indexable
 
@@ -679,6 +716,12 @@ And some more comments
 | \`C\` | This is a parameter. Documentation with a double line |
 | \`D\` | <p>These are comments with paras</p> <p>These are comments with paras</p> Other comments Comments with <p>paras</p> <p>These are comments with paras</p> |
 
+## Index
+
+### Properties
+
+- [~~propertyWithComments~~](InterfaceWithComments.md#propertywithcomments)
+
 ## Properties
 
 | Property | Type | Description |
@@ -743,6 +786,17 @@ exports[`Interface Reflection should compile interface with event properties: (O
 
 Defined in: [interfaces.ts:1](http://source-url)
 
+## Index
+
+### Properties
+
+- [someProp](InterfaceWithEventProperties.md#someprop)
+
+### Events
+
+- [anotherEvent](InterfaceWithEventProperties.md#anotherevent)
+- [~~someEvent~~](InterfaceWithEventProperties.md#someevent)
+
 ## Properties
 
 | Property | Type | Description |
@@ -796,6 +850,13 @@ Defined in: [interfaces.ts:1](http://source-url)
 
 Comments for InterfaceWithFlags
 
+## Index
+
+### Properties
+
+- [expermintalProp](InterfaceWithFlags.md#expermintalprop)
+- [internalProp](InterfaceWithFlags.md#internalprop)
+
 ## Properties
 
 | Property | Type | Description |
@@ -841,6 +902,12 @@ Comments for InterfaceWithTypeParameters
 | :------ |
 | \`A\` |
 
+## Index
+
+### Properties
+
+- [prop](InterfaceWithTypeParameters.md#prop)
+
 ## Properties
 
 | Property | Type | Description |
@@ -876,6 +943,12 @@ exports[`Interface Reflection should compile multiple indexable interface: (Outp
 "# Interface: MultipleIndexableInterface
 
 Defined in: [interfaces.ts:1](http://source-url)
+
+## Index
+
+### Properties
+
+- [prop](MultipleIndexableInterface.md#prop)
 
 ## Indexable
 
