@@ -229,6 +229,59 @@ Accessor comments
 "
 `;
 
+exports[`Class Reflection should compile class with accessor keywords: (Output File Strategy "members") (Option Group "2") 1`] = `
+"# Class: ClassWithAccessorKeywords
+
+Defined in: [classes.ts:1](http://source-url)
+
+## Constructors
+
+### new ClassWithAccessorKeywords()
+
+\`\`\`ts
+new ClassWithAccessorKeywords(): ClassWithAccessorKeywords
+\`\`\`
+
+#### Returns
+
+[\`ClassWithAccessorKeywords\`](ClassWithAccessorKeywords.md)
+
+## Accessors
+
+### accessor1
+
+Defined in: [classes.ts:1](http://source-url)
+
+Accessor comments
+
+#### Example
+
+\`\`\`ts
+const x = 1;
+\`\`\`
+
+***
+
+### accessor2
+
+Defined in: [classes.ts:1](http://source-url)
+
+Accessor comments
+
+#### Remarks
+
+Remark comments
+
+***
+
+### accessor3
+
+Defined in: [classes.ts:1](http://source-url)
+
+Accessor comments
+"
+`;
+
 exports[`Class Reflection should compile class with accessors: (Output File Strategy "members") (Option Group "1") 1`] = `
 "# Class: ClassWithAccessors
 
@@ -1028,6 +1081,83 @@ Defined in: [classes.ts:1](http://source-url)
 "
 `;
 
+exports[`Class Reflection should compile class with prop categories: (Output File Strategy "members") (Option Group "2") 1`] = `
+"# Class: ClassWithPropCategories
+
+Defined in: [classes.ts:1](http://source-url)
+
+## Constructors
+
+### new ClassWithPropCategories()
+
+\`\`\`ts
+new ClassWithPropCategories(opts: object): ClassWithPropCategories
+\`\`\`
+
+Defined in: [classes.ts:1](http://source-url)
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| \`opts\` | \\{ \`a\`: \`string\`; \`b\`: \`string\`; \\} |
+| \`opts.a\` | \`string\` |
+| \`opts.b\` | \`string\` |
+
+#### Returns
+
+[\`ClassWithPropCategories\`](ClassWithPropCategories.md)
+
+## CatA
+
+### prop1
+
+\`\`\`ts
+prop1: string;
+\`\`\`
+
+Defined in: [classes.ts:1](http://source-url)
+
+## CatB
+
+### prop2
+
+\`\`\`ts
+prop2: string;
+\`\`\`
+
+Defined in: [classes.ts:1](http://source-url)
+
+## Other
+
+### method1()
+
+\`\`\`ts
+method1(): void
+\`\`\`
+
+Defined in: [classes.ts:1](http://source-url)
+
+#### Returns
+
+\`void\`
+
+***
+
+### method2()
+
+\`\`\`ts
+method2(): void
+\`\`\`
+
+Defined in: [classes.ts:1](http://source-url)
+
+#### Returns
+
+\`void\`
+"
+`;
+
 exports[`Class Reflection should compile class with simple props: (Output File Strategy "members") (Option Group "1") 1`] = `
 "# Class: ClassWithSimpleProps
 
@@ -1302,6 +1432,70 @@ Defined in: [classes.ts:1](http://source-url)
 "
 `;
 
+exports[`Class Reflection should compile class without prop categories: (Output File Strategy "members") (Option Group "2") 1`] = `
+"# Class: ClassWithoutPropCategories
+
+Defined in: [classes.ts:1](http://source-url)
+
+## Constructors
+
+### new ClassWithoutPropCategories()
+
+\`\`\`ts
+new ClassWithoutPropCategories(opts: object): ClassWithoutPropCategories
+\`\`\`
+
+Defined in: [classes.ts:1](http://source-url)
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| \`opts\` | \\{ \`a\`: \`string\`; \`b\`: \`string\`; \\} |
+| \`opts.a\` | \`string\` |
+| \`opts.b\` | \`string\` |
+
+#### Returns
+
+[\`ClassWithoutPropCategories\`](ClassWithoutPropCategories.md)
+
+## Properties
+
+| Property | Type |
+| :------ | :------ |
+| <a id="prop1"></a> \`prop1\` | \`string\` |
+| <a id="prop2"></a> \`prop2\` | \`string\` |
+
+## Methods
+
+### method1()
+
+\`\`\`ts
+method1(): void
+\`\`\`
+
+Defined in: [classes.ts:1](http://source-url)
+
+#### Returns
+
+\`void\`
+
+***
+
+### method2()
+
+\`\`\`ts
+method2(): void
+\`\`\`
+
+Defined in: [classes.ts:1](http://source-url)
+
+#### Returns
+
+\`void\`
+"
+`;
+
 exports[`Class Reflection should compile derived class: (Output File Strategy "members") (Option Group "1") 1`] = `
 "# Class: DerivedClassA
 
@@ -1554,6 +1748,33 @@ Defined in: [classes.ts:1](http://source-url)
 ### new GrandChildClassA()
 
 > **new GrandChildClassA**(): [\`GrandChildClassA\`](GrandChildClassA.md)
+
+#### Returns
+
+[\`GrandChildClassA\`](GrandChildClassA.md)
+
+#### Inherited from
+
+[\`ChildClassA\`](ChildClassA.md).[\`constructor\`](ChildClassA.md#constructors)
+"
+`;
+
+exports[`Class Reflection should compile hierarchy for GrandChildClassA: (Output File Strategy "members") (Option Group "2") 1`] = `
+"# Class: GrandChildClassA
+
+Defined in: [classes.ts:1](http://source-url)
+
+## Extends
+
+- [\`ChildClassA\`](ChildClassA.md)
+
+## Constructors
+
+### new GrandChildClassA()
+
+\`\`\`ts
+new GrandChildClassA(): GrandChildClassA
+\`\`\`
 
 #### Returns
 

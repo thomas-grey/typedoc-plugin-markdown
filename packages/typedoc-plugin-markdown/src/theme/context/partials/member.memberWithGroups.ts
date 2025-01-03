@@ -97,17 +97,6 @@ export function memberWithGroups(
     });
   }
 
-  if (
-    model.documents ||
-    model?.groups?.some((group) => group.allChildrenHaveOwnDocument())
-  ) {
-    md.push(
-      this.partials.reflectionIndex(model, {
-        headingLevel: options.headingLevel,
-      }),
-    );
-  }
-
   md.push(this.partials.body(model, { headingLevel: options.headingLevel }));
 
   return md.join('\n\n');

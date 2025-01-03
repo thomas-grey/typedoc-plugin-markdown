@@ -4834,6 +4834,18 @@ exports[`Navigation should gets Navigation Json for single entry point: (Output 
     "title": "Classes",
     "children": [
       {
+        "title": "__DuplicateClass__",
+        "kind": 128,
+        "path": "classes/DuplicateClass.md",
+        "isDeprecated": false
+      },
+      {
+        "title": "_DuplicateClass_",
+        "kind": 128,
+        "path": "classes/DuplicateClass-1.md",
+        "isDeprecated": false
+      },
+      {
         "title": "AbstractClass",
         "kind": 128,
         "path": "classes/AbstractClass.md",
@@ -4951,6 +4963,12 @@ exports[`Navigation should gets Navigation Json for single entry point: (Output 
         "title": "DisposableClass",
         "kind": 128,
         "path": "classes/DisposableClass.md",
+        "isDeprecated": false
+      },
+      {
+        "title": "DuplicateClass",
+        "kind": 128,
+        "path": "classes/DuplicateClass-2.md",
         "isDeprecated": false
       },
       {

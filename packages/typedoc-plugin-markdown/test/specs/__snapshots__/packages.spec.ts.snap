@@ -18,6 +18,10 @@ exports[`Packages should compile index page for packages: (Output File Strategy 
 
 # packages-example
 
+## Documents
+
+- [Project Document 1](documents/Project-Document-1.md)
+
 ## Packages
 
 - [@scope/package-1 - v1.0.0](@scope/package-1/index.md)

@@ -19,6 +19,36 @@ export class BasicClass {
 }
 
 /**
+ * Comments for `DuplicateClass`
+ */
+export class DuplicateClass {
+  /**
+   * Comments for prop
+   */
+  prop!: string;
+}
+
+/**
+ * Comments for `_DuplicateClass_`
+ */
+export class _DuplicateClass_ {
+  /**
+   * Comments for prop
+   */
+  prop!: string;
+}
+
+/**
+ * Comments for `__DuplicateClass__`
+ */
+export class __DuplicateClass__ {
+  /**
+   * Comments for prop
+   */
+  prop!: string;
+}
+
+/**
  * Comments for ClassWithSimpleProps
  */
 export class ClassWithSimpleProps {

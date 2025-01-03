@@ -360,7 +360,7 @@ Defined in: [index.ts:1](http://source-url)
 
 ## Constructors
 
-<a id="Constructors"></a>
+<a id="constructors"></a>
 
 ### new ClassPropertiesTable()
 
@@ -372,7 +372,7 @@ Defined in: [index.ts:1](http://source-url)
 
 #### Inherited from
 
-[\`BaseClassProperties\`](https://example.com/Class.BaseClassProperties.md).[\`constructor\`](https://example.com/Class.BaseClassProperties.md#Constructors)
+[\`BaseClassProperties\`](https://example.com/Class.BaseClassProperties.md).[\`constructor\`](https://example.com/Class.BaseClassProperties.md#constructors)
 
 ## Properties
 

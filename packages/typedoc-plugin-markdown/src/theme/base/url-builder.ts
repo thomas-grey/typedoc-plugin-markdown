@@ -349,15 +349,23 @@ export class UrlBuilder {
           url = removeFirstScopedDirectory(url);
         }
 
-        const duplicateUrls = this.urls.filter(
-          (urlMapping) =>
-            urlMapping.url.toLowerCase() === url.toLowerCase() &&
-            urlMapping.url !== url,
-        );
-
-        if (duplicateUrls.length > 0) {
+        while (
+          this.urls.some(
+            (urlMapping) =>
+              urlMapping.url.toLowerCase() === url.toLowerCase() &&
+              urlMapping.model.name !== reflection.name,
+          )
+        ) {
           const urlParts = url.split('.');
-          urlParts[urlParts.length - 2] += `-${duplicateUrls.length}`;
+          const baseName = urlParts.slice(0, -1).join('.');
+          const match = baseName.match(/-(\d+)$/);
+          const currentCount = match ? parseInt(match[1], 10) : 0;
+          const baseWithoutSuffix = match
+            ? baseName.slice(0, match.index)
+            : baseName;
+
+          urlParts[urlParts.length - 2] =
+            `${baseWithoutSuffix}-${currentCount + 1}`;
           url = urlParts.join('.');
         }
       }
@@ -389,7 +397,7 @@ export class UrlBuilder {
         });
       } else {
         reflection.traverse((child) => {
-          this.applyAnchorUrl(child as any, reflection.url || '');
+          this.applyAnchorUrl(child, reflection.url || '');
         });
       }
     } else if (reflection.parent) {
@@ -590,7 +598,7 @@ export class UrlBuilder {
       return null;
     }
     if (reflection.kind === ReflectionKind.Constructor) {
-      return 'Constructors';
+      return `constructors`;
     }
     const anchorParts = [reflection.name.replace(/[\\[\]]/g, '')];
     const typeParams = (reflection as DeclarationReflection)?.typeParameters;

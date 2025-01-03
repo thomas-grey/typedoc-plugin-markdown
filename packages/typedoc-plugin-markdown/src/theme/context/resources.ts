@@ -82,11 +82,11 @@ export const resourcePartials = (context: MarkdownThemeContext) => {
     body: (model: ContainerReflection, options: { headingLevel: number }) =>
       partials.body.apply(context, [model, options]) as string,
     categories: (
-      model: ReflectionCategory[],
+      models: ReflectionCategory[],
       options: { headingLevel: number },
-    ) => partials.categories.apply(context, [model, options]) as string,
+    ) => partials.categories.apply(context, [models, options]) as string,
     groups: (
-      model: ReflectionGroup[],
+      model: ContainerReflection,
       options: { headingLevel: number; kind: ReflectionKind },
     ) => partials.groups.apply(context, [model, options]) as string,
     members: (
@@ -164,10 +164,6 @@ There is no association list partial for properties as these are handled as a st
     ) => partials.propertiesTable.apply(context, [model, options]) as string,
     referenceMember: (model: ReferenceReflection) =>
       partials.referenceMember.apply(context, [model]) as string,
-    reflectionIndex: (
-      model: ProjectReflection | DeclarationReflection,
-      options: { headingLevel: number },
-    ) => partials.reflectionIndex.apply(context, [model, options]) as string,
     signature: (
       model: SignatureReflection,
       options: {

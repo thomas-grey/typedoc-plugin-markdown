@@ -21,7 +21,6 @@ export * from './member.parametersList.js';
 export * from './member.parametersTable.js';
 export * from './member.propertiesTable.js';
 export * from './member.reference.js';
-export * from './member.reflectionIndex.js';
 export * from './member.signature.js';
 export * from './member.signatureParameters.js';
 export * from './member.signatureReturns.js';

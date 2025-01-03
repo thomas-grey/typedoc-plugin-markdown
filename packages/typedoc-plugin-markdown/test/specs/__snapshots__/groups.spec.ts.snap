@@ -1505,6 +1505,12 @@ exports[`Groups should compile module index for a namespace: (Output File Strate
 
 # \\_Namespace\\_A\\_
 
+<a id="namespaceinterface"></a>
+
+## NamespaceInterface
+
+***
+
 ## Namespaces
 
 <table>
@@ -1529,10 +1535,6 @@ exports[`Groups should compile module index for a namespace: (Output File Strate
 </tr>
 </tbody>
 </table>
-
-<a id="namespaceinterface"></a>
-
-## NamespaceInterface
 "
 `;
 
@@ -1950,43 +1952,6 @@ exports[`Groups should compile module index with namespaces index page: (Output 
 
 A module that contains namespaces
 
-## Namespaces
-
-<table>
-<thead>
-<tr>
-<th align="left">Namespace</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-[\\_Namespace\\_A\\_](namespaces/Namespace_A/index.md)
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-[NamespaceB](namespaces/NamespaceB.md)
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-</tbody>
-</table>
-
 <a id="_function_a_"></a>
 
 ## \\_function\\_A\\_()
@@ -2054,6 +2019,43 @@ _SIGNATURE_MEMBER_PARTIAL_
 ## EnumB
 
 ***
+
+## Namespaces
+
+<table>
+<thead>
+<tr>
+<th align="left">Namespace</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+[\\_Namespace\\_A\\_](namespaces/Namespace_A/index.md)
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+[NamespaceB](namespaces/NamespaceB.md)
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+</tbody>
+</table>
 
 <a id="_type_a_"></a>
 

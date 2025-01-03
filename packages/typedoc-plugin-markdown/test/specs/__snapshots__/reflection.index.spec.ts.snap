@@ -1,15 +1,119 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Reflection Indexes should compile reflection indexes: (Output File Strategy "members") (Option Group "1") 1`] = `
-"# MY README
+"# typedoc-stubs
 
-> Some block quote
+Module comments
 
-Some text.
+## Enumerations
 
-## Readme heading
+- [BasicEnum](enumerations/BasicEnum.md)
+- [EnumWithValues](enumerations/EnumWithValues.md)
 
-Some text.
+## Classes
+
+- [\\_\\_DuplicateClass\\_\\_](classes/DuplicateClass.md)
+- [\\_DuplicateClass\\_](classes/DuplicateClass-1.md)
+- [AbstractClass](classes/AbstractClass.md)
+- [BaseClass](classes/BaseClass.md)
+- [BasicClass](classes/BasicClass.md)
+- [CallbacksOptions](classes/CallbacksOptions.md)
+- [ChildClassA](classes/ChildClassA.md)
+- [ChildClassB](classes/ChildClassB.md)
+- [ClassWithAccessorKeywords](classes/ClassWithAccessorKeywords.md)
+- [ClassWithAccessors](classes/ClassWithAccessors.md)
+- [ClassWithComplexProps](classes/ClassWithComplexProps.md)
+- [ClassWithConstructorOverloads](classes/ClassWithConstructorOverloads.md)
+- [ClassWithFlags](classes/ClassWithFlags.md)
+- [ClassWithModifiers](classes/ClassWithModifiers.md)
+- [ClassWithoutPropCategories](classes/ClassWithoutPropCategories.md)
+- [ClassWithPropCategories](classes/ClassWithPropCategories.md)
+- [ClassWithSimpleProps](classes/ClassWithSimpleProps.md)
+- [ClassWithSymbols](classes/ClassWithSymbols.md)
+- [ClassWithTypeParameters](classes/ClassWithTypeParameters.md)
+- [DerivedClassA](classes/DerivedClassA.md)
+- [DerivedClassB](classes/DerivedClassB.md)
+- [DisposableClass](classes/DisposableClass.md)
+- [DuplicateClass](classes/DuplicateClass-2.md)
+- [GrandChildClassA](classes/GrandChildClassA.md)
+- [GrandChildClassB](classes/GrandChildClassB.md)
+
+## Interfaces
+
+- [BasicInterface](interfaces/BasicInterface.md)
+- [CustomEventInterface](interfaces/CustomEventInterface.md)
+- [ExtendedInterface](interfaces/ExtendedInterface.md)
+- [IndexableInterface](interfaces/IndexableInterface.md)
+- [InterfaceWithComments](interfaces/InterfaceWithComments.md)
+- [InterfaceWithEventProperties](interfaces/InterfaceWithEventProperties.md)
+- [InterfaceWithFlags](interfaces/InterfaceWithFlags.md)
+- [InterfaceWithTypeParameters](interfaces/InterfaceWithTypeParameters.md)
+- [MultipleIndexableInterface](interfaces/MultipleIndexableInterface.md)
+
+## Type Aliases
+
+- [\\_\\_TypeDeclarationWithSpecialCharacters\\_](type-aliases/TypeDeclarationWithSpecialCharacters.md)
+- [ArrayOfObjectsType](type-aliases/ArrayOfObjectsType.md)
+- [ArrayType](type-aliases/ArrayType.md)
+- [ConditionalType](type-aliases/ConditionalType.md)
+- [ExplicitTypeDefOptions](type-aliases/ExplicitTypeDefOptions.md)
+- [ExternalReferenceType](type-aliases/ExternalReferenceType.md)
+- [FunctionType](type-aliases/FunctionType.md)
+- [IndexAccessType](type-aliases/IndexAccessType.md)
+- [IntersectionType](type-aliases/IntersectionType.md)
+- [LiteralType](type-aliases/LiteralType.md)
+- [PartialMappedType](type-aliases/PartialMappedType.md)
+- [PrimitiveType](type-aliases/PrimitiveType.md)
+- [PromiseTypeWithObject](type-aliases/PromiseTypeWithObject.md)
+- [PromiseTypeWithSymbol](type-aliases/PromiseTypeWithSymbol.md)
+- [QueryType](type-aliases/QueryType.md)
+- [ReadonlyMappedType](type-aliases/ReadonlyMappedType.md)
+- [StringLiteralType](type-aliases/StringLiteralType.md)
+- [Stuff](type-aliases/Stuff.md)
+- [TupleType](type-aliases/TupleType.md)
+- [TypeDefOptions](type-aliases/TypeDefOptions.md)
+- [TypeWithExternalSymbolLinkMapping](type-aliases/TypeWithExternalSymbolLinkMapping.md)
+- [TypeWithReturns](type-aliases/TypeWithReturns.md)
+- [TypeWithTypeParams](type-aliases/TypeWithTypeParams.md)
+- [UnionType](type-aliases/UnionType.md)
+- [UnionTypeWithTemplateStrings](type-aliases/UnionTypeWithTemplateStrings.md)
+- [UsefulUnionType](type-aliases/UsefulUnionType.md)
+
+## Variables
+
+- [objectLiteralVariable](variables/objectLiteralVariable.md)
+- [objectWithSymbol](variables/objectWithSymbol.md)
+- [someQuery](variables/someQuery.md)
+- [stringVariable](variables/stringVariable.md)
+- [templateVariableString](variables/templateVariableString.md)
+- [typedef](variables/typedef.md)
+- [typeOperatorVariable](variables/typeOperatorVariable.md)
+
+## Functions
+
+- [basicFunction](functions/basicFunction.md)
+- [basicFunctionWithReturns](functions/basicFunctionWithReturns.md)
+- [curriedFunction](functions/curriedFunction.md)
+- [functionReturningAFunction](functions/functionReturningAFunction.md)
+- [functionReturningAnObject](functions/functionReturningAnObject.md)
+- [functionReturningAPromise](functions/functionReturningAPromise.md)
+- [functionReturningAString](functions/functionReturningAString.md)
+- [functionReturningAUnionType](functions/functionReturningAUnionType.md)
+- [functionWithArrayOfOptionalStuff](functions/functionWithArrayOfOptionalStuff.md)
+- [functionWithArrayOfStuff](functions/functionWithArrayOfStuff.md)
+- [functionWithArrayOfUnionStuff](functions/functionWithArrayOfUnionStuff.md)
+- [functionWithComplexParams](functions/functionWithComplexParams.md)
+- [functionWithDefaultParameters](functions/functionWithDefaultParameters.md)
+- [functionWithMultipleSignatures](functions/functionWithMultipleSignatures.md)
+- [functionWithNamedParams](functions/functionWithNamedParams.md)
+- [functionWithNestedParameters](functions/functionWithNestedParameters.md)
+- [functionWithOptionalParameters](functions/functionWithOptionalParameters.md)
+- [functionWithRestParams](functions/functionWithRestParams.md)
+- [functionWithTypeParameters](functions/functionWithTypeParameters.md)
+- [functionWithUnionParams](functions/functionWithUnionParams.md)
+- [tupleTypeFunction](functions/tupleTypeFunction.md)
+- [tupleTypeFunctionInlineExplicit](functions/tupleTypeFunctionInlineExplicit.md)
+- [tupleTypeFunctionOptional](functions/tupleTypeFunctionOptional.md)
 "
 `;
 
@@ -29,6 +133,8 @@ Module comments
 
 | Class | Description |
 | :------ | :------ |
+| [\\_\\_DuplicateClass\\_\\_](classes/DuplicateClass.md) | Comments for \`__DuplicateClass__\` |
+| [\\_DuplicateClass\\_](classes/DuplicateClass-1.md) | Comments for \`_DuplicateClass_\` |
 | [AbstractClass](classes/AbstractClass.md) | - |
 | [BaseClass](classes/BaseClass.md) | - |
 | [BasicClass](classes/BasicClass.md) | Comments for BasicClass |
@@ -49,6 +155,7 @@ Module comments
 | [DerivedClassA](classes/DerivedClassA.md) | Comments for DerivedClassA |
 | [DerivedClassB](classes/DerivedClassB.md) | Comments for DerivedClassB |
 | [DisposableClass](classes/DisposableClass.md) | - |
+| [DuplicateClass](classes/DuplicateClass-2.md) | Comments for \`DuplicateClass\` |
 | [GrandChildClassA](classes/GrandChildClassA.md) | - |
 | [GrandChildClassB](classes/GrandChildClassB.md) | - |
 

@@ -196,7 +196,10 @@ const config = {
       },
     },
     options: [
-      { entryFileName: 'index.md' },
+      {
+        entryFileName: 'index.md',
+        projectDocuments: ['./test/fixtures/PROJECT_DOC_1.md'],
+      },
       {
         excludeScopesInPaths: true,
         mergeReadme: true,

@@ -1,7 +1,7 @@
 import { MarkdownPageEvent } from '@plugin/events/index.js';
 import { heading } from '@plugin/libs/markdown/index.js';
 import { MarkdownThemeContext } from '@plugin/theme/index.js';
-import { ProjectReflection, ReflectionKind } from 'typedoc';
+import { ProjectReflection } from 'typedoc';
 
 /**
  * Template that maps to the root project reflection. This will be the index page / documentation root page.
@@ -39,26 +39,7 @@ export function project(
     md.push(this.partials.comment(page.model.comment, { headingLevel: 2 }));
   }
 
-  if (
-    page.model?.groups?.some(
-      (group) =>
-        group.title === this.i18n.kind_plural_module() ||
-        group.allChildrenHaveOwnDocument(),
-    )
-  ) {
-    if (
-      page.model.children?.some((child) => child.kind !== ReflectionKind.Module)
-    ) {
-      md.push(this.partials.body(page.model, { headingLevel: 2 }));
-    }
-    md.push(
-      this.partials.reflectionIndex(page.model, {
-        headingLevel: 2,
-      }),
-    );
-  } else {
-    md.push(this.partials.body(page.model, { headingLevel: 2 }));
-  }
+  md.push(this.partials.body(page.model, { headingLevel: 2 }));
 
   md.push(this.partials.footer());
 
